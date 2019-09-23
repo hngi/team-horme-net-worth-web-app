@@ -1,0 +1,60 @@
+.cont{
+    background-color: black;
+    height: 100vh;
+}
+#reg{
+    color: rgb(255, 187, 0);
+}
+#btn2{
+    background-color: rgb(255, 187, 0) !important;
+    border: none !important;
+    width: 30% !important;
+}
+#type{
+    border: none !important;
+    border-bottom: solid 0.5px !important;
+    border-bottom-left-radius: 0% !important;
+    border-bottom-right-radius: 0% !important;
+}
+#login{
+    background-color: rgb(255, 187, 0) !important;
+    margin-left: 50%;
+    border-radius: 0 !important;
+    border: none !important;
+}
+#h12{
+    color: white !important;
+    text-align: center !important;
+}
+#forget{
+    color: rgb(255, 187, 0);
+}
+#rem{
+    margin-left: 20% !important;
+    color: white !important;
+}
+#remt{
+    margin-left: 1%;
+    color: white !important;
+}
+.btn1{
+    background-color: rgb(255, 187, 0) !important;
+    border: none !important;
+    width: 52% !important;
+    margin-left: 25%;
+}
+#or{
+    color: white !important;
+    margin-left: 33% !important;
+}
+.img{
+    width: 10%;
+    height: 10%;
+   
+}
+.logo{
+    margin-left: 30%;
+}
+#agree{
+    margin-top: 1%;
+}
