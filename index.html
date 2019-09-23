@@ -1,10 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Net-Worth Calculator</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <!-- Sign-in page -->
+        <div class="container-fluid">
+            <div
+                class="row float-sm-right p-5"
+                style="min-height: 100vh; background-color: black;"
+            >
+                <div class=" align-self-center text-center">
+                    <h4 class="text-light mb-5">Already have an account?</h4>
+                    <form action="">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-3">
+                                    <input
+                                        type="text"
+                                        name="username"
+                                        id="username"
+                                        placeholder="Username"
+                                        class="p-4 form-control form-control-lg color"
+                                        style="border: 0; border-bottom: 2px solid yellow; border-radius:0; background-color: transparent; color:yellow;"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group m-3">
+                                    <input
+                                        type="text"
+                                        name="password"
+                                        id="password1"
+                                        placeholder="Password"
+                                        class="p-4 form-control form-control-lg color"
+                                        style="border: 0; border-bottom: 2px solid yellow; border-radius:0; background-color: transparent; color:yellow;"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group p-3">
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id="checkbox"
+                                    /><span
+                                        class="font-weight-bold text-light pl-1"
+                                        >Remember me</span
+                                    >
+                                </div>
+                                <div class="form-group pt-3">
+                                    <input
+                                        type="submit"
+                                        name="submit"
+                                        id="submit"
+                                        value="Login"
+                                        class="p-2 btn btn-warning text-light font-weight-bold col-9"
+                                        style="border-radius: 50px; color: yellow"
+                                    />
+                                    <a href="#" class="text-warning"
+                                        ><p>Forgot password?</p></a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row pt-2" style="min-height: 100vh;" id="page">
+                <div class="col col-md-12 align-self-center text-center">
+                    <h4
+                        class="mt-3 text-left text-warning"
+                        style="color: yellow"
+                    >
+                        REGISTER HERE
+                    </h4>
+                    <form action="" method="" class="justify-content-center">
+                        <div class="row">
+                            <div class="col-md-6 p-3">
+                                <div class="form-group m-5">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder=" Full Name"
+                                        class="p-4 form-control form-control-lg color pl-5"
+                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group m-5">
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Email Address"
+                                        class="p-4 form-control form-control-lg color pl-5"
+                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group m-5">
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        id="password"
+                                        placeholder="Choose your password"
+                                        class="p-4 form-control form-control-lg color pl-5"
+                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-6 p-3">
+                                <div class="form-group m-5">
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Phone Number"
+                                        class="p-4 form-control form-control-lg color pl-5"
+                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group m-5">
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Confirm Email Address"
+                                        class="p-4 form-control form-control-lg color pl-5"
+                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group m-5">
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        id="password"
+                                        placeholder="Confirm password"
+                                        class="p-4 form-control form-control-lg color pl-5"
+                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group p-3">
+                            <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="checkbox"
+                                required
+                            /><span class="font-weight-bold"
+                                >I Agree To The Terms And Conditions</span
+                            >
+                        </div>
+                        <div class="form-group p-2">
+                            <input
+                                type="submit"
+                                name="submit"
+                                id="submit"
+                                value="REGISTER NOW"
+                                class="p-2 btn btn-warning col-8 col-md-4 text-light font-weight-bold"
+                                style="border-radius: 50px; color: yellow"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="./app.js"></script>
+    </body>
 </html>
