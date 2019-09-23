@@ -35,23 +35,28 @@ img {
     padding: 5px;
 }
 
-#name{
-    background: url(./icons/user.svg) no-repeat scroll 7px 7px ; 
+#name {
+    background: url(./icons/user.svg) no-repeat scroll 7px 7px;
     background-size: 15px;
 }
-#secondName{
-    background: url(./icons/user.svg) no-repeat scroll 7px 7px ; 
+#secondName {
+    background: url(./icons/user.svg) no-repeat scroll 7px 7px;
     background-size: 15px;
 }
-#email{
-    background: url(./icons/envelope.svg) no-repeat scroll 7px 7px ; 
+#email {
+    background: url(./icons/envelope.svg) no-repeat scroll 7px 7px;
     background-size: 15px;
 }
-#password{
-    background: url(./icons/lock.svg) no-repeat scroll 7px 7px ; 
+#password {
+    background: url(./icons/lock.svg) no-repeat scroll 7px 7px;
     background-size: 15px;
 }
-#phone{
-    background: url(./icons/phone-alt.svg) no-repeat scroll 7px 7px ; 
+#phone {
+    background: url(./icons/phone-alt.svg) no-repeat scroll 7px 7px;
     background-size: 15px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 2px solid rgb(224, 191, 3) !important;
 }
