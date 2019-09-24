@@ -6,64 +6,162 @@
     <title>Networth Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-
+    <!-- font awesome -->
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="navigation">
+    <header id="header font">
+        <span>
+            <img
+            src="https://res.cloudinary.com/izik4004/image/upload/v1569344486/Group.png" 
+            alt="logo"
+            style="height:45px; width:190px; padding: 0.6rem 0;"
+            id="logo-img"
+            />
+        </span>
+    
+        <nav id="navigation">
             <ul>
-                <li>Account</li>
-                <li>Home</li>
-                <li>Sign Out</li>
+                <li>
+                    <a class="nav-link">  
+                        <select name="currencies" id="">
+                            <option value="">&#8358</option>
+                            <option value="">&#8352</option>
+                            <option value="">&#8360</option>
+                            <option value="">&#8364</option>
+                            <option value="">&#8371</option>
+                            <option value="">&#8368</option>
+                            <option value="">&#8367</option>
+                            <option value="">&#8366</option>
+                            <option value="">&#8365</option>
+                        </select>
+                    </a>
+                </li> <b class="slash">|</b>
+                <li >
+                    <a class="nav-link"><i class="fas fa-user-circle"></i>
+                        <select name="dropdown" id="">
+                            <option value="account">Account</option>
+                            <option value="home">Home</option>
+                            <option value="signout">Sign OUt</option>
+                        </select>
+                    </a>
+                </li>
             </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class = "main-heading font italize">
+            <h2 class="bold">What is my net worth?</h2>
+            <p> Networth is the total value of a person's assets minus the total value of his or her liabilities. 
+                You won't use it to make many day to day decisions but it is a useful snapshop of when you're at financially
+            </p>
+
+            <h3 class="bold">What are assets and liabilities?</h3>
+                <p>if you’re not sure what assets and liabilities are, here are some guidelines:</p>
+
+            <h3 class="bold">Assets:</h3>
+            <p>
+                Assets include cash — such as in your checking,
+                savings and retirement accounts — and items such as cars, property 
+                and investments that you could sell for cash.
+                Count your home if you would be willing to sell it 
+                should the need arise or if you use it for a home equity line of credit.
+            </p>
+
+            <h3 class="bold">Liabilities:</h3>
+            <p>
+                Liabilities are debts. Revolving consumer
+                debts — such as credit card balances — fall 
+                into this category, as do personal, auto, payday and title 
+                loan balances. If you’re using 
+                your home as an asset, its mortgage counts as a liability as well.
+            </p>
+            
+
+            <p>Use our networth calculator to find yours.</p>
         </div>
-    </nav>
-    <div class=" ">
-        <h1>NET WORTH</h1>
-    </div>
-    <div class = " ">
-        <h2>What is my net worth?</h2>
-        <p class = " "> Networth is the total value of a person's assets minus the total value of his or her liabilities. You won't use it to make many day to day decisions but it is a useful snapshop of when you're at financially</p>
-        <p class=" ">Use our networth calculator to find yours.</p>
-    </div>
-    <form name="frmExample" id="frmExample" method="post">
-        <fieldset>
-            <div class = " ">
-                <h2>Your net worth Calculator</h2>
-            </div>
-            <div>
-                <p class = " ">Asset (What you own) &nbsp; &nbsp; Liabilities (What you Owe)</p>
-            </div>
-            <div>
-                <!--assets-->
-                    <label>Your home</label>
-                    <input type="text" name="home" value="" class="calc" onblur="rejectNegatives(this)"/><br />
-                    <label>Savings</label>
-                    <input type="text" name="savings" value="" class="calc" onblur="rejectNegatives(this)"/><br />
-                    <label>Shares</label>
-                    <input type="text" name="shares" value="" class="calc" onblur="rejectNegatives(this)"/><br />
-                    <label>Car/Motorcycle</label>
-                    <input type="text" name="car" value="" class="calc" onblur="rejectNegatives(this)"/><br />
-                    <label>Other Investments</label>
-                    <input type="text" name="otherinv" value="" class="calc" onblur="rejectNegatives(this)"/><br />
+    
+        <form name="frmExample" id="frmExample" method="post">
+            <fieldset>
+                <h2 class="form-heading">Your net worth Calculator</h2>
+
+                <div id="assetLiability">
+                    <!-- Assets -->
+                    <div>
+                        <p>Asset (What you own)</p>
+                        <div class="block">
+                            <label>Your home</label>
+                            <input type="text" name="home" value="" class="calc" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Savings</label>
+                            <input type="text" name="savings" value="" class="calc" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Shares</label>
+                            <input type="text" name="shares" value="" class="calc" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Car/Motorcycle</label>
+                            <input type="text" name="car" value="" class="calc" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Other Investments</label>
+                            <input type="text" name="otherinv" value="" class="calc" onblur="rejectNegatives(this)"/>
+                        </div>
+                        
+                        <div>
+                            <div class='totals'>Total Assets: <span id='assets'>0</span></div>
+                        </div>
                     
-                    <!--liabilities-->
-                    <label>Personal Loan</label>
-                    <input type="text" name="ploan" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
-                    <label>Car Loan</label>
-                    <input type="text" name="cloan" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
-                    <label>Hire Purchase</label>
-                    <input type="text" name="hpurpase" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
-                    <label>Credit Card</label>
-                    <input type="text" name="ccard" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
-                    <label>Property Loan</label>
-                    <input type="text" name="proploan" value="" class="calc2" onblur="rejectNegatives(this)"/><br />    
-            </div>
-            <span class='totals'>Total Assets: <span id='assets'>0</span></span> &nbsp; &nbsp; <span class='totals'>Total Liabilities: <span id='liabilities'>0</span></span><br/>
-            <span>Your Net Worth</span><br/>	
-            <div id='total'>0</div>	
-        </fieldset>
-        <input type="reset" name="reset" value="Clear Form" onclick="resetform()"/>
+                    </div>
+
+                    <!-- Liabilities -->
+                    <div>
+                        <p>Liabilities (What you Owe)</p>
+                        <div class="block">
+                            <label>Personal Loan</label>
+                            <input type="text" name="ploan" value="" class="calc2" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Car Loan</label>
+                            <input type="text" name="cloan" value="" class="calc2" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Hire Purchase</label>
+                            <input type="text" name="hpurpase" value="" class="calc2" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Credit Card</label>
+                            <input type="text" name="ccard" value="" class="calc2" onblur="rejectNegatives(this)"/>
+                        </div>
+                        <div class="block">
+                            <label>Property Loan</label>
+                            <input type="text" name="proploan" value="" class="calc2" onblur="rejectNegatives(this)"/>
+                        </div>
+
+                        <div>
+                            <div class='totals'>Total Liabilities: <span id='liabilities'>0</span></div>
+                        </div>
+                    </div>   
+                </div>
+
+                <input id="clear-form" type="reset" name="reset" value="Clear Form" onclick="resetform()"/>
+                <div id='total' class="italize bold">Your Net Worth is:</div>
+    
+            </fieldset>
+                   
+        </form>
+    </div>
         
 
     <script src="horme.js"></script>
