@@ -1,0 +1,65 @@
+body .first {
+    background-image: url(./images/IMG_5618.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input[placeholder] {
+    font-size: 0.8em;
+}
+.button {
+    border-radius: 10px;
+}
+.transparent {
+    background-color: transparent !important;
+    border-radius: 10px;
+}
+.form-group {
+    margin: 0 auto;
+}
+.forgot {
+    font-size: 0.8em;
+    color: #555;
+}
+.sign {
+    font-size: 0.8em;
+    color: #777;
+    font-weight: bold;
+}
+.color {
+    background-color: rgb(248, 233, 233);
+}
+img {
+    height: 16px;
+    width: 16px;
+    padding: 5px;
+}
+
+#name {
+    background: url(./icons/user.svg) no-repeat scroll 7px 7px;
+    background-size: 15px;
+}
+#secondName {
+    background: url(./icons/user.svg) no-repeat scroll 7px 7px;
+    background-size: 15px;
+}
+#email {
+    background: url(./icons/envelope.svg) no-repeat scroll 7px 7px;
+    background-size: 15px;
+}
+#password {
+    background: url(./icons/lock.svg) no-repeat scroll 7px 7px;
+    background-size: 15px;
+}
+#phone {
+    background: url(./icons/phone-alt.svg) no-repeat scroll 7px 7px;
+    background-size: 15px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 2px solid rgb(224, 191, 3) !important;
+}
+.form-control input{
+    
+}
