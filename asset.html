@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Networth Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <ul>
+                <li>Account</li>
+                <li>Home</li>
+                <li>Sign Out</li>
+            </ul>
+        </div>
+    </nav>
+    <div class=" ">
+        <h1>NET WORTH</h1>
+    </div>
+    <div class = " ">
+        <h2>What is my net worth?</h2>
+        <p class = " "> Networth is the total value of a person's assets minus the total value of his or her liabilities. You won't use it to make many day to day decisions but it is a useful snapshop of when you're at financially</p>
+        <p class=" ">Use our networth calculator to find yours.</p>
+    </div>
+    <form name="frmExample" id="frmExample" method="post">
+        <fieldset>
+            <div class = " ">
+                <h2>Your net worth Calculator</h2>
+            </div>
+            <div>
+                <p class = " ">Asset (What you own) &nbsp; &nbsp; Liabilities (What you Owe)</p>
+            </div>
+            <div>
+                <!--assets-->
+                    <label>Your home</label>
+                    <input type="text" name="home" value="" class="calc" onblur="rejectNegatives(this)"/><br />
+                    <label>Savings</label>
+                    <input type="text" name="savings" value="" class="calc" onblur="rejectNegatives(this)"/><br />
+                    <label>Shares</label>
+                    <input type="text" name="shares" value="" class="calc" onblur="rejectNegatives(this)"/><br />
+                    <label>Car/Motorcycle</label>
+                    <input type="text" name="car" value="" class="calc" onblur="rejectNegatives(this)"/><br />
+                    <label>Other Investments</label>
+                    <input type="text" name="otherinv" value="" class="calc" onblur="rejectNegatives(this)"/><br />
+                    
+                    <!--liabilities-->
+                    <label>Personal Loan</label>
+                    <input type="text" name="ploan" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
+                    <label>Car Loan</label>
+                    <input type="text" name="cloan" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
+                    <label>Hire Purchase</label>
+                    <input type="text" name="hpurpase" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
+                    <label>Credit Card</label>
+                    <input type="text" name="ccard" value="" class="calc2" onblur="rejectNegatives(this)"/><br />
+                    <label>Property Loan</label>
+                    <input type="text" name="proploan" value="" class="calc2" onblur="rejectNegatives(this)"/><br />    
+            </div>
+            <span class='totals'>Total Assets: <span id='assets'>0</span></span> &nbsp; &nbsp; <span class='totals'>Total Liabilities: <span id='liabilities'>0</span></span><br/>
+            <span>Your Net Worth</span><br/>	
+            <div id='total'>0</div>	
+        </fieldset>
+        <input type="reset" name="reset" value="Clear Form" onclick="resetform()"/>
+        
+
+    <script src="horme.js"></script>
+</body>
+</html>
