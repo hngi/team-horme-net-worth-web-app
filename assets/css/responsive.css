@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1024px) {
+    .form-wrapper {
+        width: 90%;
+        padding: 15px;
+    }
+    
+}
+   
+
+@media only screen and (max-width: 550px) {
+    .form-wrapper {
+        width: 90%;
+        margin: auto;
+    }
+    .input-group {
+        margin: 10px auto;
+        width: 100%;
+    }
+    .form-container button {
+        width: 100%;
+    }
+    .main-header h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .team-text{
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .main-header h1 {
+        font-size: 20px;
+        letter-spacing: 0;
+        
+    }
+    .login-link {
+        font-size: 15px;
+        letter-spacing: 0;
+        /* line-height: 1px; */
+    }
+    
+}
+
+
+
