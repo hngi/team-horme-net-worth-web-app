@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./calculator.css">
+    <title>NetWorth Calculator</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-light d-flex align-items-center px-5">
+        <a class="navbar-brand d-flex" href="#">
+          <img src="./assets/logo.svg" width="50" height="50" class="d-inline-block align-center" alt="">
+          <h3><strong>NET WORTH</strong></h3>
+        </a>
+
+        <ul class="d-flex">
+          <li class="nav-item dropdown currency">
+              <div class="nav-link dropdown-toggle currency-dropdown d-flex align-items-center mt-2 mr-4 p-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h3>&#8358</h3>
+              </div>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"><h3>&#163</h3></a>
+                <a class="dropdown-item" href="#"><h3>&#36</h3></a>
+                <a class="dropdown-item" href="#"><h3>&#162</h3></a>
+              </div>
+          </li>
+
+          <li class="nav-item dropdown">
+              <div class="nav-link dropdown-toggle d-flex align-items-center p-0 mt-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="./assets/account.png" alt="account">
+                <p>Account</p>
+              </div>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Account</a>
+                <a class="dropdown-item" href="#">Account</a>
+                <a class="dropdown-item" href="#">Account</a>
+              </div>
+          </li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+      <div class="text mt-5">
+          <h1>What is net worth?</h1>
+
+          <p>The formal definition of net worth is the combined value of your assets, or the things you own that have monetary value, minus the value of your liabilities — the accounts or loans that you’re paying off.</p>
+            
+          <h3>
+              Net worth is the combined value of your assets minus the value of your liabilities.
+          </h3>
+    
+          <p>Assets that count toward your net worth tend to be liquid assets. Some fixed assets can count, too, but it depends on whether you can or would sell them if you needed to. Liabilities are a bit easier to classify — any money you owe to another person or entity falls under this category.</p>
+    
+          <h3>What are assets and liabilities?</h3>
+    
+          <p>If you’re not sure what assets and liabilities are, here are some guidelines: </p>
+    
+          <p><strong>Assets:</strong> Assets include cash — such as in your checking, savings and retirement accounts — and items such as cars, property and investments that you could sell for cash. Count your home if you would be willing to sell it should the need arise or if you use it for a home equity line of credit. </p>
+    
+          <h3>Assets include cash and items that you could sell for cash. </h3>
+    
+          <p><strong>Liabilities:</strong> Liabilities are debts. Revolving consumer debts — such as credit card balances — fall into this category, as do personal, auto, payday and title loan balances. If you’re using your home as an asset, its mortgage counts as a liability as well.</p>
+      </div>
+
+      <div class="row mt-5">
+          <div class="mx-auto">
+            <h1>Your net worth calculator <h1>
+          </div>
+      </div>
+
+      <div class="calculator mt-5">
+        <div class="row">
+          <div class="asset col-md-6">
+            <div class="yellow-bar">
+              <h3>Assets(What you own)</h3>
+            </div>
+
+            <div class="input mt-3 pr-5 d-flex align-items-center justify-content-between">
+              <p>Your Home</p>
+              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+            </div>
+            
+            
+            <div class="input mt-1  pr-5 d-flex align-items-center justify-content-between">
+              <p>Savings</p>
+              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+            </div>
+
+            
+            <div class="input mt-1 d-flex pr-5 align-items-center justify-content-between">
+              <p>Shares</p>
+              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+            </div>
+
+            
+            <div class="input mt-1 d-flex pr-5 align-items-center justify-content-between">
+              <p>Car/Motorcycle</p>
+              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+            </div>
+
+            
+            <div class="input mt-1 d-flex pr-5 align-items-center justify-content-between">
+              <p>Other Investments</p>
+              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+            </div>
+
+          </div>
+
+          
+          <div class="asset liabilities col-md-6">
+              <div class="yellow-bar">
+                <h3>Assets(What you own)</h3>
+              </div>
+  
+              <div class="input mt-3 pl-5 d-flex align-items-center justify-content-between">
+                <p>Personal Loan</p>
+                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              </div>
+              
+              
+              <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
+                <p>Car Loan</p>
+                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              </div>
+  
+              
+              <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
+                <p>Hire Purchase</p>
+                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              </div>
+  
+              
+              <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
+                <p>Credit Card</p>
+                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              </div>
+  
+              
+              <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
+                <p>Property Loan</p>
+                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              </div>
+
+        </div>
+
+       
+
+      </div>
+
+      <div class="row button">
+          <button class="btn btn-yellow" onclick="resetForm()">Clear input</button>
+        </div>
+
+        <div class="row">
+          <div class="assets-bottom col-md-6">
+              <div class="input mt-1 pr-5 d-flex align-items-center justify-content-between">
+                <h3>Assets:</h3>
+                <input type="text" class="text-input" class="form-control" >
+              </div>
+          </div>
+
+          <div class="assets-bottom col-md-6">
+              <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
+                <h3>Total Liabilities:</h3>
+                <input type="text" class="text-input" class="form-control" >
+              </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="total">
+            <h4>Your Total Net Worth: <span id="total"> 0</span></h4>
+          </div>
+        </div>
+    </div>
+
+    <div class="disclaimers mt-5">
+      <h4><strong>Disclaimers</strong></h4>
+      <p>This is a model not a prediction. Results are only estimates, the actual amounts may be higher or lower. We cannot predict things that will affect your decision such as movements in interest rates. </p>
+      <p>This calculator is not intended to be your sole source of information when making a financial decision. You should consider whether you should get advice from a licensed financial adviser.</p>
+    </div>
+
+    </div>
+
+    <footer class="footer mt-5">
+        <h3>Copyright © 2019. All Rights Reserved</h3>
+    </footer>
+
+
+
+
+    <script src="horme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
