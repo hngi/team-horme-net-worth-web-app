@@ -35,8 +35,8 @@
               </div>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Account</a>
-                <a class="dropdown-item" href="#">Account</a>
-                <a class="dropdown-item" href="#">Account</a>
+                <a class="dropdown-item" href="#">Home</a>
+                <a class="dropdown-item" href="#">Sign Out</a>
               </div>
           </li>
         </ul>
@@ -81,31 +81,31 @@
 
             <div class="input mt-3 pr-5 d-flex align-items-center justify-content-between">
               <p>Your Home</p>
-              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              <input type="text" class="text-input calc" class="form-control"  onblur="rejectNegatives(this)">
             </div>
             
             
             <div class="input mt-1  pr-5 d-flex align-items-center justify-content-between">
               <p>Savings</p>
-              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              <input type="text" class="text-input calc" class="form-control"  onblur="rejectNegatives(this)">
             </div>
 
             
             <div class="input mt-1 d-flex pr-5 align-items-center justify-content-between">
               <p>Shares</p>
-              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              <input type="text" class="text-input calc" class="form-control"  onblur="rejectNegatives(this)">
             </div>
 
             
             <div class="input mt-1 d-flex pr-5 align-items-center justify-content-between">
               <p>Car/Motorcycle</p>
-              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              <input type="text" class="text-input calc" class="form-control"  onblur="rejectNegatives(this)">
             </div>
 
             
             <div class="input mt-1 d-flex pr-5 align-items-center justify-content-between">
               <p>Other Investments</p>
-              <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+              <input type="text" class="text-input calc" class="form-control"  onblur="rejectNegatives(this)">
             </div>
 
           </div>
@@ -118,31 +118,31 @@
   
               <div class="input mt-3 pl-5 d-flex align-items-center justify-content-between">
                 <p>Personal Loan</p>
-                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+                <input type="text" class="text-input calc2" class="form-control"  onblur="rejectNegatives(this)">
               </div>
               
               
               <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
                 <p>Car Loan</p>
-                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+                <input type="text" class="text-input calc2" class="form-control"  onblur="rejectNegatives(this)">
               </div>
   
               
               <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
                 <p>Hire Purchase</p>
-                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+                <input type="text" class="text-input calc2" class="form-control"  onblur="rejectNegatives(this)">
               </div>
   
               
               <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
                 <p>Credit Card</p>
-                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+                <input type="text" class="text-input calc2" class="form-control"  onblur="rejectNegatives(this)">
               </div>
   
               
               <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
                 <p>Property Loan</p>
-                <input type="text" class="text-input" class="form-control"  onblur="rejectNegatives(this)">
+                <input type="text" class="text-input calc2" class="form-control"  onblur="rejectNegatives(this)">
               </div>
 
         </div>
@@ -157,17 +157,14 @@
 
         <div class="row">
           <div class="assets-bottom col-md-6">
-              <div class="input mt-1 pr-5 d-flex align-items-center justify-content-between">
-                <h3>Assets:</h3>
-                <input type="text" class="text-input" class="form-control" >
+              <div class="total-assets mt-1 pr-5 d-flex align-items-center justify-content-between">
+                 <h3>Total Assets: </h3><span id='assets'>0</span>
               </div>
           </div>
 
           <div class="assets-bottom col-md-6">
-              <div class="input mt-1 pl-5 d-flex align-items-center justify-content-between">
-                <h3>Total Liabilities:</h3>
-                <input type="text" class="text-input" class="form-control" >
-              </div>
+              <div class="total-liabilities mt-1 pl-5 d-flex align-items-center justify-content-between">
+                <h3>Total Liabilities:</h3><span id='liabilities'>0</span>
           </div>
         </div>
 
