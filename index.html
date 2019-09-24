@@ -20,6 +20,12 @@
                 class="row float-sm-right p-5"
                 style="min-height: 100vh; background-color: black;"
             >
+                <a
+                    href="#register"
+                    style="color: orange"
+                    class="font-weight-bold d-md-none"
+                    >SIGN UP</a
+                >
                 <div class=" align-self-center text-center">
                     <h4 class="text-light mb-5">Already have an account?</h4>
                     <form action="">
@@ -32,7 +38,7 @@
                                         id="username"
                                         placeholder="Username"
                                         class="p-4 form-control form-control-lg color"
-                                        style="border: 0; border-bottom: 2px solid yellow; border-radius:0; background-color: transparent; color:yellow;"
+                                        style="border: 0; border-bottom: 2px solid orange; border-radius:0; background-color: transparent;"
                                         required
                                     />
                                 </div>
@@ -43,7 +49,7 @@
                                         id="password1"
                                         placeholder="Password"
                                         class="p-4 form-control form-control-lg color"
-                                        style="border: 0; border-bottom: 2px solid yellow; border-radius:0; background-color: transparent; color:yellow;"
+                                        style="border: 0; border-bottom: 2px solid orange; border-radius:0; background-color: transparent; color:yellow;"
                                         required
                                     />
                                 </div>
@@ -63,8 +69,8 @@
                                         name="submit"
                                         id="submit"
                                         value="Login"
-                                        class="p-2 btn btn-warning text-light font-weight-bold col-9"
-                                        style="border-radius: 50px; color: yellow"
+                                        class="p-2 btn text-light font-weight-bold col-9 mb-2"
+                                        style="border-radius: 50px; background-color: orange"
                                     />
                                     <a href="#" class="text-warning"
                                         ><p>Forgot password?</p></a
@@ -79,7 +85,8 @@
                 <div class="col col-md-12 align-self-center text-center">
                     <h4
                         class="mt-3 ml-5 text-left text-warning"
-                        style="color: yellow"
+                        style="color: orange"
+                        id="register"
                     >
                         REGISTER HERE
                     </h4>
@@ -89,9 +96,9 @@
                                 <div class="form-group m-5">
                                     <input
                                         type="text"
-                                        name="name"
-                                        id="name"
-                                        placeholder=" Full Name"
+                                        name="firstName"
+                                        id="firstName"
+                                        placeholder=" First Name"
                                         class="p-4 form-control form-control-lg color pl-5"
                                         style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
                                         required
@@ -102,9 +109,9 @@
                                 <div class="form-group m-5">
                                     <input
                                         type="text"
-                                        name="phone"
-                                        id="phone"
-                                        placeholder="Phone Number"
+                                        name="secondName"
+                                        id="secondName"
+                                        placeholder="Second Name"
                                         class="p-4 form-control form-control-lg color pl-5"
                                         style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
                                         required
@@ -128,9 +135,9 @@
                                 <div class="form-group m-5">
                                     <input
                                         type="text"
-                                        name="email"
-                                        id="email"
-                                        placeholder="Confirm Email Address"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Phone Number"
                                         class="p-4 form-control form-control-lg color pl-5"
                                         style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
                                         required
@@ -180,8 +187,8 @@
                                 name="submit"
                                 id="submit"
                                 value="REGISTER NOW"
-                                class="p-2 btn btn-warning col-8 col-md-3 text-light font-weight-bold"
-                                style="border-radius: 50px; color: yellow"
+                                class="p-2 btn col-8 col-md-3 text-light font-weight-bold"
+                                style="border-radius: 50px; background-color: orange"
                             />
                         </div>
                     </form>
