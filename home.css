@@ -1,0 +1,75 @@
+*, *::before, *::after, html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer {
+  background-color: #000000;
+  padding: 1rem 5rem;
+  color: #FFA500;
+}
+
+nav.navbar {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFA500), to(rgba(34, 34, 34, 0)));
+  background: linear-gradient(180deg, #FFA500 0%, rgba(34, 34, 34, 0) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  padding: 2rem 2rem 15rem;
+  min-height: 100vh;
+  background: url("./images/finance.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+.main-content p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 38px;
+}
+
+.main-content .heading {
+  padding-top: 4rem;
+}
+
+.main-content .heading h1 {
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 53px 135px rgba(0, 0, 0, 0.25);
+  font-family: Modern Antiqua;
+  font-style: normal;
+  font-size: 3rem;
+  margin: 0 auto;
+  max-width: 45rem;
+  text-align: center;
+}
+
+.main-content .text {
+  margin-top: 5rem;
+}
+
+.main-content .text div.top {
+  margin-bottom: 4rem;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+.main-content .heading-bottom {
+  max-width: 40rem;
+  color: #11100F;
+  padding: 3rem 0;
+}
+
+.btn-yellow {
+  background: #FFA500;
+  -webkit-box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 0.5rem 2rem;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=home.css.map */
