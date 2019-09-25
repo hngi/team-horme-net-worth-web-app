@@ -1,0 +1,41 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="home.css">
+</head>
+<body>
+      <div class="rectangle"> <div><img src="service.png"/> <span><b> NET WORTH</b></span></div></div>
+	  <div class="container">
+            <div class="inner-right">
+				<div id = "know">Knowing your Net-worth is <br> important</div><br>
+				<div id="worth">
+                <p> You probably know the meaning of the term net worth</p>
+				<p> You've heard some actor is worth $10 million. But what does that exactly mean?<Br>
+				And why should you care about your net worth?</p>
+				<p>Net worth is the best way to undersatnd your financial health, if you track it over time <br>
+				your net worth will illustrate the progress you are making towards paying off debt</p>
+				<p>Your net worth is not about your in come- your income does not even factor into your net <br>
+				worth. Instead net worth includes savings, investments and debts. 
+				</p>
+				<p>
+				Think about it this way, if you make $30,000 per year, but you have an investment <br>
+				portfolio worth $3.5 million, you are going to be more concerned about your total net<br>
+				worth because the $30,000 you make is very small part of your financial situation. 
+			</P>
+			</div>
+			<div id = "step"><p>
+			     <i><b>You are a step away from learning <br>
+			     how to calculate your  Net-worth</b></I>
+			    </P></div>
+            </div>
+			<div id = "register">
+	               <button type="submit" name="submit" value= "submit" class="regi">REGISTER HERE</button><br><br>
+         </div>
+		 </div>
+		 
+		 
+		 <DIV id = "footer">Copyight All &copy; 2019 All right Reserved</DIV>
+</body>
+</html>
