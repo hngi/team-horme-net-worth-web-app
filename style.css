@@ -1,0 +1,247 @@
+.cont {
+    background-color: black;
+    height: 100vh;
+}
+#reg {
+    color: rgb(255, 187, 0);
+}
+#btn2 {
+    border-radius: 25px;
+    background-color: rgb(255, 187, 0) !important;
+    border: none !important;
+    width: 30% !important;
+}
+#type {
+    border: none !important;
+    border-bottom: solid 0.5px !important;
+    border-bottom-left-radius: 0% !important;
+    border-bottom-right-radius: 0% !important;
+}
+#login {
+    background-color: black;
+    border: none;
+    margin-left: 50%;
+    border-bottom: 1px solid rgb(255, 187, 0);
+    color: rgb(255, 187, 0);
+}
+
+#h12 {
+    color: white !important;
+    text-align: center !important;
+}
+#forget {
+    color: rgb(255, 187, 0);
+}
+#rem {
+    margin-left: 20% !important;
+    color: white !important;
+}
+#remt {
+    margin-left: 1%;
+    color: white !important;
+}
+.btn1 {
+    background-color: rgb(255, 187, 0) !important;
+    border: none !important;
+    width: 52% !important;
+    margin-left: 25%;
+}
+#btn {
+    border-radius: 25px;
+}
+#or {
+    color: white !important;
+    margin-left: 33% !important;
+}
+.img {
+    width: 10%;
+    height: 10%;
+}
+.logo {
+    margin-left: 30%;
+}
+#agree {
+    margin-top: 1%;
+}
+
+/* Asset Page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+header {
+    height: 47px;
+    background: linear-gradient(180deg, #ffa500 0%, rgba(15, 15, 15, 0) 100%);
+    color: #000;
+    text-align: right;
+}
+#navigation {
+    text-align: right;
+    margin: 0 1rem 0 0;
+    padding: 0.6rem 0;
+}
+#navigation ul {
+    margin-top: 0;
+}
+#navigation li {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    list-style-type: none;
+}
+#navigation a {
+    text-decoration: none;
+    color: #000;
+}
+#navigation a:hover {
+    color: #926819;
+}
+#navigation select {
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* General classes */
+.slash {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.italize {
+    font-style: italic;
+}
+.font {
+    font-family: "Montserrat", sans-serif;
+}
+.bold {
+    font-size: 1.5rem;
+    font-weight: bold !important;
+}
+.block {
+    padding: 1rem 0 1rem 3rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.main-heading {
+    margin: 2rem 0;
+    padding: 1rem;
+    text-align: justify;
+    color: #000;
+}
+form .form-heading {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+form #assetLiability {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+form #assetLiability p {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    background: #ffa500;
+    margin-top: 0;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+}
+form #assetLiability label {
+    display: inline-block;
+    width: 200px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #222222;
+    text-align: left;
+}
+form #assetLiability input {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    background: #ffffff;
+    border: 1px solid #ffa500;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+form .totals {
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1rem 0 1rem 3rem;
+    color: #000000;
+}
+form .totals #assets,
+form .totals #liabilities {
+    text-align: left;
+    height: 45px;
+    background: #ffffff;
+    border: 4px solid #ffa500;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0 2rem;
+}
+form .totals #assets {
+    margin-left: 2.4rem;
+}
+form .totals #liabilities {
+    margin-left: 0.4rem;
+}
+form #total {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background: #ffa500;
+    box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+form #clear-form {
+    width: 110px;
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    background: #ffa500;
+    box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-left: 4rem;
+}
+.dropdown-menu {
+    min-width: 2rem !important;
+}
+@media (min-width: 576px) {
+    .naa {
+        background-color: none;
+    }
+    .d {
+        display: none !important;
+    }
+}
+@media (min-width: 768px) {
+    .d {
+        display: flex !important;
+    }
+}
