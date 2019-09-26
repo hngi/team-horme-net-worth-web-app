@@ -1,16 +1,28 @@
 body {
-    margin:0 auto;
+    margin:0;
     padding:0;
     border:10px solid rgba(153, 153, 153, 0.884);
-    width:80%
+   
 }
+
 #menu{
     display:flex;
     margin:0;
     width:100%;
     height: 30px;
     align-items: center;
-    background-color:rgba(10, 163, 125, 0.904);
+    justify-content: space-between;
+    background-color:#1AB188;
+}
+#menu .p {
+    display:none;
+    margin-right:10px;
+    font-size:15px;
+    cursor: pointer;
+}
+#mdiv{
+    display:inherit;
+    align-items: center;
 }
 #menu img{
     width: 25px;
@@ -29,53 +41,69 @@ body {
 }
 #body{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0;
     padding:40px 20px;
-    /* padding:0; */
-    width:100%;
 }
-/* #space{width:20%;} */
-#part{
-    /* width:80%; */
+.part{
+    background-color: rgb(32, 43, 44);
+    width: 45%;
+    height: 500px;
+    padding:0;
+    border-radius:10px;
+}
+.info{
+    width:45%;
     margin:0;
 }
-#info{
-    /* margin-right: 20px; */
-    width:50%;
-}
-#info h1{
-    color: rgba(10, 163, 125, 0.904);
+.info h1{
+    font-family: Modern Antiqua;
+    font-style: normal;
+    color: #1AB188;
     text-shadow: 2px 0px 2px black; 
     text-align: center;
+    margin:0;
 }
-#info p {
+.info p {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 2px;
     line-height: 50px;
-    font-family: sans-serif;
+    margin:0;
 
 }
-#info h2 {
-    font-family: sans-serif;
+.info h2 {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 44px;
     text-align: center;
     text-shadow: 2px 0px 2px black; 
+    margin:0;
 }
 #sg {
-    color: rgba(10, 163, 125, 0.904);
-    font-family: sans-serif;
+    color: #1AB188;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
     text-align: center;
     text-shadow: 2px 0px 2px rgba(177, 168, 168, 0.801); 
 }
 #lgSu{
     box-shadow: -5px 5px 10px grey;
     background-color: rgb(32, 43, 44);
-    width:70%;
-    height: 600px;
+    width:100%;
+    height: 450px;
     border-radius:10px;
     padding:20px;
     padding-bottom:30px;
     color:white;
     font-family: sans-serif;
     text-align: center;
+    margin:0;
     
 }
 #lgSu h1 {
@@ -83,6 +111,8 @@ body {
 }
 #lgin{
     display:none;
+    width:100%;
+    height: 450px;
 }
 #lgin p {
     margin-top:70px;
@@ -93,7 +123,7 @@ body {
     color:grey;
     padding:5px;
     margin-bottom: 40px;
-    border:1px solid rgb(46, 44, 44);
+    border:1px solid #E5E5E5;
 }
 
 #lgSu .btn {
@@ -110,7 +140,7 @@ body {
     color:grey;
     padding:5px;
     margin-bottom: 50px;
-    border:1px solid rgb(46, 44, 44);
+    border:1px solid #E5E5E5;
 
 }
 #data{
@@ -120,14 +150,14 @@ body {
 #data input{
     background-color:inherit;
     color:grey;
-    width:40%;
+    width:41%;
     padding:5px;
-    border:1px solid rgb(46, 44, 44);
+    border:1px solid #E5E5E5;
 }
 .gt {
    width:86%;
    font-size:10px;
-   background-color: rgba(10, 163, 125, 0.904);
+   background-color: #1AB188;
    padding: 10px 70px;
 }
 #su {
@@ -136,7 +166,48 @@ body {
 
 }
 #lg {
-    background-color:rgba(10, 163, 125, 0.904);
+    background-color:#1AB188;
     border:1px solid rgb(90, 87, 87);  
 }
-/* #sgup {display:none} */
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .info h1{
+        font-size:20px;
+    }
+    .info p {
+        font-size:12px;
+        line-height: 30px;
+
+    }
+    .info h2 {
+        font-size:20px;
+        line-height: 30px;
+
+    }
+}
+@media only screen and (max-width: 600px) {
+    #menu .p{
+        display:inline;
+    }
+    .part{
+        display:none;
+        width:80%;
+        margin-right:40px;
+    }
+    .info{
+        width:95%;
+    }
+    #body{
+       padding: 20px 10px;
+    }
+    #sg{
+        font-size:20px;
+    }
+    .appear {
+        display:block;
+    }
+
+    .hide{
+    display:none;
+    }
+}
