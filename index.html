@@ -15,187 +15,187 @@
     </head>
     <body>
         <!-- Sign-in page -->
+        <nav
+            class="navbar navbar-light"
+            style="background-color: rgb(71, 165, 168)"
+        >
+            <span>
+                <img
+                    src="https://res.cloudinary.com/izik4004/image/upload/v1569344486/Group.png"
+                    alt="logo"
+                    style="width: 90px; height: 30px"
+                    id="logo-img"
+                />
+            </span>
+        </nav>
         <div class="container-fluid">
             <div
-                class="row float-sm-right p-5"
-                style="min-height: 100vh; background-color: black;"
+                class="row pt-2 float-sm-left"
+                style="min-height: 100vh;"
+                id="page"
             >
-                <span
-                    class="d-md-none mb-2 row text-light"
-                    style="font-size: 0.7em"
-                    >Don't have an account?<a
-                        href="#register"
-                        style="color: orange"
-                        class="ml-1 d-md-none"
-                        >Sign up here</a
-                    ></span
-                >
-                <div class=" align-self-center text-center">
-                    <h4 class="text-light mb-5">Already have an account?</h4>
-                    <form action="">
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group m-3">
-                                    <input
-                                        type="text"
-                                        name="username"
-                                        id="username"
-                                        placeholder="Username"
-                                        class="p-4 form-control form-control-lg color"
-                                        style="border: 0; border-bottom: 2px solid orange; border-radius:0; background-color: transparent; color: orange;"
-                                        required
-                                    />
-                                </div>
-                                <div class="form-group m-3">
-                                    <input
-                                        type="text"
-                                        name="password"
-                                        id="password1"
-                                        placeholder="Password"
-                                        class="p-4 form-control form-control-lg color"
-                                        style="border: 0; border-bottom: 2px solid orange; border-radius:0; background-color: transparent; color:orange;"
-                                        required
-                                    />
-                                </div>
-                                <div class="form-group p-3">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox"
-                                        id="checkbox"
-                                    /><span
-                                        class="font-weight-bold text-light pl-1"
-                                        >Remember me</span
-                                    >
-                                </div>
-                                <div class="form-group pt-3">
-                                    <input
-                                        type="submit"
-                                        name="submit"
-                                        id="submit"
-                                        value="Login"
-                                        class="p-2 btn text-light font-weight-bold col-9 mb-2"
-                                        style="border-radius: 50px; background-color: orange"
-                                    />
-                                    <a href="#" class="text-warning"
-                                        ><p>Forgot password?</p></a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row pt-2" style="min-height: 100vh;" id="page">
-                <div class="col col-md-12 align-self-center text-center">
-                    <h4
-                        class="mt-3 ml-5 text-left text-warning"
-                        style="color: orange"
-                        id="register"
+                <div class="col col-md-6 align-self-center text-center">
+                    <h3
+                        class="h3 font-weight-bolder"
+                        style="color:  rgb(71, 165, 168)"
                     >
-                        REGISTER HERE
-                    </h4>
-                    <form action="" method="" class="justify-content-center">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group m-5">
-                                    <input
-                                        type="text"
-                                        name="firstName"
-                                        id="firstName"
-                                        placeholder=" First Name"
-                                        class="p-4 form-control form-control-lg color pl-5"
-                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group m-5">
-                                    <input
-                                        type="text"
-                                        name="secondName"
-                                        id="secondName"
-                                        placeholder="Second Name"
-                                        class="p-4 form-control form-control-lg color pl-5"
-                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group m-5">
-                                    <input
-                                        type="text"
-                                        name="email"
-                                        id="email"
-                                        placeholder="Email Address"
-                                        class="p-4 form-control form-control-lg color pl-5"
-                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group m-5">
-                                    <input
-                                        type="text"
-                                        name="phone"
-                                        id="phone"
-                                        placeholder="Phone Number"
-                                        class="p-4 form-control form-control-lg color pl-5"
-                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group m-5">
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        id="password"
-                                        placeholder="Choose your password"
-                                        class="p-4 form-control form-control-lg color pl-5"
-                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group m-5">
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        id="password"
-                                        placeholder="Confirm password"
-                                        class="p-4 form-control form-control-lg color pl-5"
-                                        style="border: 0; border-bottom: 2px solid black; border-radius:0; background-color: transparent"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group p-3">
-                            <input
-                                type="checkbox"
-                                name="checkbox"
-                                id="checkbox"
-                                required
-                            /><span class="font-weight-bold ml-1"
-                                >I Agree To The Terms And Conditions</span
+                        Knowing your Net-Worth is important
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veritatis repudiandae officiis odit? Magni ratione nobis
+                        inventore neque. Perferendis sit sequi delectus illum?
+                        Accusamus, dolores beatae maxime fugit laboriosam
+                        quibusdam alias. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Consectetur voluptas suscipit cum quia
+                        expedita, iure, eligendi ipsa harum delectus consequatur
+                        quisquam consequuntur earum quae iste nobis repudiandae
+                        alias, odio dicta. Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. Eius omnis sequi pariatur
+                        itaque alias illo deserunt inventore qui doloribus,
+                        harum esse voluptatibus, consequatur suscipit nam saepe
+                        obcaecati facere! Unde, sequi.
+                    </p>
+                    <h3 class="h3 text-dark font-weight-bolder">
+                        You're a step away from knowing how to calculate your
+                        Net-Worth
+                    </h3>
+                    <h3
+                        class="h3 font-weight-bolder"
+                        style="color:  rgb(71, 165, 168)"
+                    >
+                        Sign up with us for free
+                    </h3>
+                </div>
+                <div
+                    class="row float-sm-right p-5 align-self-center m-auto bor col-md-5 mb-5"
+                    style="min-height: 50vh;background-color: rgb(14, 34, 56);box-shadow:  -5px  2px 2px gray;"
+                >
+                    <div class=" align-self-center text-center pb-5 col-md-12">
+                        <div class="row" style="">
+                            <a
+                                href="#"
+                                class=" p-2 text-light col-6 bg"
+                                id="signUpLink"
+                                >Sign up</a
+                            >
+                            <a
+                                href="#"
+                                class="bg-secondary p-2 text-light col-6"
+                                id="signInLink"
+                                >Sign in</a
                             >
                         </div>
-                        <div class="form-group p-2">
-                            <input
-                                type="submit"
-                                name="submit"
-                                id="submit"
-                                value="REGISTER NOW"
-                                class="p-2 btn col-8 col-md-3 text-light font-weight-bold"
-                                style="border-radius: 50px; background-color: orange"
-                            />
-                        </div>
-                    </form>
+
+                        <form action="" id="signUp">
+                            <h5 class="text-light h5 mt-4">Sign up for free</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-inline m-auto">
+                                        <input
+                                            type="text"
+                                            name="firstName"
+                                            id="firstName"
+                                            placeholder="First name"
+                                            class="p-2 m-1 form-control form-control-lg color col-sm-12 col-md-5 ml-md-4"
+                                            required
+                                            style="background-color: transparent"
+                                        />
+                                        <input
+                                            type="text"
+                                            name="secondName"
+                                            id="secondName"
+                                            placeholder="Second name"
+                                            class="p-2 m-1 form-control form-control-lg color mt-3 mt-md-1 col-sm-12 col-md-5 "
+                                            required
+                                            style="background-color: transparent"
+                                        />
+                                    </div>
+                                    <div class="form-group m-1 mt-3">
+                                        <input
+                                            type="text"
+                                            name="password"
+                                            id="password1"
+                                            placeholder="Password"
+                                            class="p-2 form-control form-control-lg color"
+                                            required
+                                            style="background-color: transparent"
+                                        />
+                                    </div>
+                                    <div class="form-group m-1 mt-3">
+                                        <input
+                                            type="text"
+                                            name="password"
+                                            id="password1"
+                                            placeholder="Confirm password"
+                                            class="p-2 form-control form-control-lg color"
+                                            required
+                                            style="background-color: transparent"
+                                        />
+                                    </div>
+
+                                    <div class="form-group pt-3">
+                                        <input
+                                            type="submit"
+                                            name="submit"
+                                            id="submit"
+                                            value="Sign up"
+                                            style="background-color: rgb(71, 165, 168)"
+                                            class="p-2 btn text-light font-weight-bold col-12 mb-2"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form
+                            action=""
+                            id="signIn"
+                            style="display: none"
+                            class="p-5"
+                            style="width: 100%"
+                        >
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input
+                                            type="text"
+                                            name="Username"
+                                            id="Username"
+                                            placeholder="Username"
+                                            class=" form-control form-control-lg color mt-3 col-sm-12"
+                                            required
+                                            style="background-color: transparent;"
+                                        />
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <input
+                                            type="text"
+                                            name="password"
+                                            id="password1"
+                                            placeholder="Password"
+                                            class="p-2 form-control form-control-lg color col-sm-12"
+                                            required
+                                            style="background-color: transparent"
+                                        />
+                                    </div>
+
+                                    <div class="form-group pt-3">
+                                        <input
+                                            type="submit"
+                                            name="submit"
+                                            id="submit"
+                                            value="Sign in"
+                                            style="background-color: rgb(71, 165, 168)"
+                                            class="p-2 btn text-light font-weight-bold col-12 mb-2"
+                                        />
+                                        <a href="#" class="text-light"
+                                            ><p>Forgot password?</p></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

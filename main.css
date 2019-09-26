@@ -1,3 +1,4 @@
+
 body .first {
     background-image: url(./images/IMG_5618.JPG);
     background-size: cover;
@@ -35,7 +36,7 @@ img {
     padding: 5px;
 }
 
-#firstName {
+/* #firstName {
     background: url(./icons/user.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
 }
@@ -54,15 +55,32 @@ img {
 #phone {
     background: url(./icons/phone-alt.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
-}
+} */
 
 .form-control:focus {
     box-shadow: none;
     border-bottom: 2px solid rgb(224, 191, 3) !important;
 }
-#username::placeholder {
+/* #username::placeholder {
     color: orange;
 }
 #password1::placeholder {
     color: orange;
+} */
+@media (min-width: 576px) {
+    .bor {
+        border-radius: 0;
+    }
+}
+@media (min-width: 768px) {
+    .bor {
+        border-radius: 10px;
+    }
+    html{
+
+        overflow: hidden;
+    }
+}
+.bg{
+    background-color: rgb(71, 165, 168);
 }
