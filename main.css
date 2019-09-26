@@ -76,10 +76,10 @@ img {
     .bor {
         border-radius: 10px;
     }
-    html{
+    /* html{
 
         overflow: hidden;
-    }
+    } */
 }
 .bg{
     background-color: rgb(38, 155, 120);
