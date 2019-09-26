@@ -8,93 +8,179 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c92acdfda0.js" crossorigin="anonymous"></script>
     <link href="fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body id="body">
-      <div class="container">
-            <div class="row">
-                    <div class="col-sm-7 mt-5">
-                        <div class="row ml-1">
-                          <h2 id="reg">Register Here</h2>
-                        </div>
-                        <div class="row"></div>
-                        <div class="row">
-                            
-                        </div>
-                        <div class="row mt-5 ">
-                           <div class="col-sm-6">
-                                <div class="form-group">
-                                        <label for=""></label>
-                                        <input type="text"
-                                          class="form-control input mt-2" name="" id="type" aria-describedby="helpId" placeholder="First Name">
-                                        <small id="helpId" class="form-text text-muted mt-4"></small>
-                                        <input type="text"
-                                        class="form-control input mt-2" name="" id="type" aria-describedby="helpId" placeholder="Email">
-                                      <small id="helpId" class="form-text text-muted mt-4"></small>
-                                      <input type="text"
-                                      class="form-control input mt-2" name="" id="type" aria-describedby="helpId" placeholder="Password">
-                                    <small id="helpId" class="form-text text-muted"></small>
-                                      </div>
-                           </div>
-                           <div class="col-sm-6">
-                                <div class="form-group">
-                                        <label for=""></label>
-                                        <input type="text"
-                                          class="form-control input mt-2" name="" id="type" aria-describedby="helpId" placeholder="Last Name">
-                                        <small id="helpId" class="form-text text-muted mt-4"></small>
-                                        <input type="text"
-                                        class="form-control input mt-2" name="" id="type" aria-describedby="helpId" placeholder="Confirm Email">
-                                      <small id="helpId" class="form-text text-muted mt-4"></small>
-                                      <input type="text"
-                                      class="form-control input mt-2" name="" id="type" aria-describedby="helpId" placeholder="Confirm Password">
-                                    <small id="helpId" class="form-text text-muted"></small>
-                                      </div>
-                           </div>
-                        </div>
-                        <div class="row mt-3 ml-1">
-                            <input type="checkbox" name="" id="agree">I Agree to Terms & Conditions</input>
-                                 
-                               
-                        </div>
-                        <div class="row mt-5 ml-1">
-                            <a name="" id="btn2" class="btn btn-primary" href="#" role="button">SIGN IN</a>
-                        </div>
+    <nav class="navbar nav navbar-expand-sm navbar-dark ">
+        <a class="navbar-brand name ml-5" href="#">NET WORTH</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav nav-link ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link user id mr-3" href="#"><i class="fas fa-user-circle"></i> User<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link user" href="#"><img src="naira.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""><span class="sr-only">(current)</span></a>
+              </li>
+               <li class="nav-item dropdown mr-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#"><img src="naira.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></a>
+                        <a class="dropdown-item" href="#">Action 2</a>
                     </div>
-                    <div class="col-sm-4 ml-5  cont">
-                        <div class="row hel mt-5">
-                            <h1 id="h12">Already have an account?</h1>
-                        </div>
-                        <div class="row">
-                          <div class="form-group">
-                            <label for=""></label>
-                            <input type="text"
-                               class="form-control" name="" id="login" aria-describedby="helpId" placeholder="Username">
-                            <small id="helpId" class="form-text text-muted"></small>
-                            <label for=""></label>
-                            <input type="text"
-                                        class="form-control" name="" id="login" aria-describedby="helpId" placeholder="Password">
-                            <small id="helpId" class="form-text text-muted"></small>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link user" id="signout" href="#">Sign Out<span class="sr-only">(current)</span></a>
+                </li>
+                
+            </ul>
+          
+        </div>
+    </nav>
+      <div class="container body mt-5">
+            <div class="row welcome justify-content-center">
+             <p><h2 id="user"> Welcome User</h2></p>   
+            </div>
+             <div class="container cont mt-3">
+                <div class="row mt-3 justify-content-center">
+                  <span id="net"> Net-Worth Calculator</span>
+                  </div>
+                  <div class="row black-bg mt-3">
+                    <div class="col-sm-8">
+                      Name of Asset
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row ">
+                          <div class="col-sm-5">
+                            <span id="money"> Monetary Value </span>
                           </div>
-                          
+                      
                         </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="checkbox" name="" id="rem"><span id="remt">Remember me</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <a href="" id="forget">Forget Password?</a>
-                            </div>
-                        </div>
+                         
+                       </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Asset1" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Asset2" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Asset3" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Asset4" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Asset5" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <div class="row mt-3 ml-1">
+                            <a name="" id="btn" class="btn btn-primary" href="#" role="button">Clear Form</a>
+                          </div>
                         
-                        
-                        <div class="row">
-                            <button type="button" id="btn" class="btn btn1 btn-primary mt-5">Login</button>
-                        </div>
+                      </div>
                     </div>
-                </div>
+                    <div class="col-sm-4 ml-5">
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                   
+                  </div>
+                  
+             </div>
+             <div class="container">
+               
+                  <div class="row black-bg mt-5">
+                    <div class="col-sm-8">
+                      Name of Liability
+                    </div>
+                    <div class="col-sm-4">
+                     <div class="row">
+                       <div class="col-sm-5">
+                          <span id="money"> Monetary Value </span>
+                       </div>
+                      
+                     </div>
+                      
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Liability1" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Liability2" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Liability3" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Liability4" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Liability5" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <div class="row mt-3 ml-1">
+                            <a name="" id="btn" class="btn btn-primary" href="#" role="button">Clear Form</a>
+                          </div>
+
+ 
+                    <div class="col-sm-4 ml-5">
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                        <label for=""></label>
+                        <input type="text" name="" id="" class="form-control" placeholder="value" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                   
+                  </div>
+                  
+             </div>
+             <div class="form-group justify-content-center">
+               <label for=""></label>
+               <input type="text"
+                 class="form-control" name="" id="display" aria-describedby="helpId" placeholder="Your Total Net-Worth Is">
+               <small id="helpId" class="form-text text-muted"></small>
+             </div>
+     
+              </div>
+             </div>
+             <div class="row copyright">
+              <i class="fas fa-copyright    ">Copyright  @2019 all right reserved</i>
+           </div>    
       </div>
+     
+     
      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
