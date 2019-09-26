@@ -57,10 +57,10 @@ img {
     background-size: 15px;
 } */
 
-.form-control:focus {
+/* .form-control:focus {
     box-shadow: none;
     border-bottom: 2px solid rgb(224, 191, 3) !important;
-}
+} */
 /* #username::placeholder {
     color: orange;
 }
@@ -82,5 +82,8 @@ img {
     }
 }
 .bg{
-    background-color: rgb(71, 165, 168);
+    background-color: rgb(38, 155, 120);
+}
+.dropdown-menu {
+    min-width: 2rem !important;
 }
