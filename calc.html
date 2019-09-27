@@ -110,15 +110,17 @@
                                                 </div>
                                                 <div class="form-group p-2">
                                                     <input
-                                                        type="submit"
-                                                        name="submit"
-                                                        id="submit"
+                                                        type="button"
+                                                        name="button"
+                                                        id="button"
+                                                        onclick="assetReset()"
+                                                        onchange="assetReset()"
                                                         value="CLEAR"
                                                         class="p-2 btn text-light font-weight-bold"
                                                         style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
                                                     />
 
-                                                    <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newAssetField()">New Asset</div>
+                                                    <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newAssetField()">Add an Asset</div>
 
                                                     <div class="row d-flex mt-3 justify-content-center">
                                                         <div class="p-3 btn-primary">Total Asset: <span id="total-asset"></span></div>
@@ -167,16 +169,19 @@
                                                         </div>                           
                                                     </div>
                                                     <div class="form-group p-2">
-                                                        <input
-                                                            type="submit"
-                                                            name="submit"
-                                                            id="submit"
+                                                         <input
+                                                            type="button"
+                                                            name="button"
+                                                            id="button"
+                                                            onclick="liabilityReset()"
+                                                            onchange="liabilityReset()"
                                                             value="CLEAR"
                                                             class="p-2 btn text-light font-weight-bold"
                                                             style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
                                                         />
 
-                                                        <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newLiabilityField()">New Liability</div>
+
+                                                        <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newLiabilityField()">Add a Liability</div>
 
                                                         <div class="row d-flex mt-3 justify-content-center">
                                                             <div class="p-3 btn-primary">Total Liability: <span id="total-liability"></span></div>

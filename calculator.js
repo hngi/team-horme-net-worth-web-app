@@ -3,21 +3,27 @@ var liabilityForm = document.querySelector("#liability-form");
 var totalAsset = document.getElementById("total-asset");
 var totalLiability = document.getElementById("total-liability");
 
-
+//prevent form submission
 assetForm.onsubmit = function(e) {
     e.preventDefault();
-    newAssetField();
 }
-
 liabilityForm.onsubmit = function(e) {
     e.preventDefault();
-    newLiabilityField();
 }
 
-// function clear() {
-//     document.
-// }
+//Reset input fields using "clear" button
+function assetReset() {
+    assetForm.reset();
+    updateTotalAsset();
+}
 
+function liabilityReset() {
+    liabilityForm.reset();
+    updateTotalLiability();
+}
+
+
+// function to add an asset
 function newAssetField() {
     var assetForm = document.querySelector("#asset-form");
     var formLength = assetForm.firstElementChild.children.length/2;
@@ -56,6 +62,8 @@ function newAssetField() {
     assetForm.firstElementChild.appendChild(assetValue);
 }
 
+
+//function to add a liability
 function newLiabilityField() {
     var liabilityForm = document.querySelector("#liability-form");
     var formLength = liabilityForm.firstElementChild.children.length/2;
@@ -94,6 +102,7 @@ function newLiabilityField() {
     liabilityForm.firstElementChild.appendChild(liabilityValue);
 }
 
+//Update values of total asset, total liability, and net worth on form change
 function updateTotalAsset() {
     var totalAsset = document.getElementById("total-asset");
     var assetValues = document.getElementsByClassName("asset-value");
