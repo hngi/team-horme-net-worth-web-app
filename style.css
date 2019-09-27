@@ -1,243 +1,73 @@
-.cont{
-    background-color: black;
-    height: 100vh;
+body{
+    background-color: #E5E5E5 !important;
 }
-#reg{
-    color: rgb(255, 187, 0);
+.body{
+    background-color: white !important;
+    
 }
-#btn2{
-    border-radius:25px;
-    background-color: rgb(255, 187, 0) !important;
-    border: none !important;
-    width: 30% !important;
-}
-#type{
-    border: none !important;
-    border-bottom: solid 0.5px !important;
-    border-bottom-left-radius: 0% !important;
-    border-bottom-right-radius: 0% !important;
-}
-#login{
-    background-color: black;
-    border:none;
-    margin-left: 50%;
-    border-bottom: 1px solid rgb(255, 187, 0);
-    color:rgb(255, 187, 0);
-}
-
-#h12{
-    color: white !important;
-    text-align: center !important;
-}
-#forget{
-    color: rgb(255, 187, 0);
-}
-#rem{
-    margin-left: 20% !important;
+#collapsibleNavId{
     color: white !important;
 }
-#remt{
-    margin-left: 1%;
-    color: white !important;
+.welcome{
+    background-color: #E5E5E5 !important;
+    
 }
-.btn1{
-    background-color: rgb(255, 187, 0) !important;
-    border: none !important;
-    width: 52% !important;
-    margin-left: 25%;
+.nav{
+    background-color: #2FC199 !important;
 }
-#btn{
-    border-radius:25px;
+.nav-link{
+    margin-left: -5% !important;
 }
-#or{
-    color: white !important;
-    margin-left: 33% !important;
+.name{
+    color: rgb(255, 255, 255) !important;
 }
-.img{
-    width: 10%;
-    height: 10%;
+.user{
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 0px 4px 4px #2FC199 !important;
    
 }
-.logo{
-    margin-left: 30%;
+.id{
+    border-right: solid 1px white;
 }
-#agree{
-    margin-top: 1%;
+#signout{
+    border-left: solid 1px white;
 }
+#user{
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 0px 4px 4px #2FC199 !important;
+    font-size: 2.5em !important;
+}
+p{
+   margin-bottom: 8% !important;
+    /* margin-left: 38% !important; */
+}
+.black-bg{
+    background-color: black !important;
+    padding: 3px;
+}
+.cont{
+    color: #2FC199 !important;
 
-/* Asset Page */
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.6;
+   
 }
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 47px;
-    background: linear-gradient(180deg, #FFA500 0%, rgba(15, 15, 15, 0) 100%);
-    color: #000;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    opacity: 1;
+#btn{
+    background-color: #1AB188 !important;
+    box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
-#navigation {
-    text-align: right;
-    margin: 0 1rem 0 0 ;
-    padding: 0.6rem 0;
+#net{
+    color: #000000 !important;
+    font-size: 2em;
+    /* margin-left: 36% !important; */
 }
-#navigation ul{
-    margin-top: 0;
-}
-#navigation li {
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    padding: 0 1rem;
-    list-style-type: none;
-}
-#navigation a {
-    text-decoration: none;
-    color: #000;
-}
-#navigation a:hover {
-    color: #926819;
-}
-#navigation select{
-    font-size: 1.2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-/* General classes */
-.slash{
-    font-size: 2rem;
-    font-weight: bold;
-}
-.italize {
-    font-style: italic;
-}
-.font {
-    font-family: 'Montserrat', sans-serif;
-}
-.bold {
-    font-size: 1.5rem;
-    font-weight: bold !important;
-}
-.block {
-    padding: 1rem 0 1rem 3rem;
-    border-bottom: 1px solid #e5e5e5;
-}
-.main-heading {
-    margin: 2rem 0;
-    padding: 1rem;
-    text-align: justify;
-    color: #000;
-}
-form .form-heading{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 0 !important; 
-}
-form #assetLiability{
-    font-family: 'Roboto', sans-serif; 
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-}
-form #assetLiability p{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-    background: #FFA500;
-    margin-top: 0;
-    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
-}
-form #assetLiability label{
-    display: inline-block;
-    width: 200px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    color: #222222;
-    text-align: left;
-}
-form #assetLiability input{
-    display: inline-block;
-    width: 200px;
-    height: 40px;
-    font-size: 14px; 
-    background: #FFFFFF;
-    border: 1px solid #FFA500;
-    box-sizing: border-box;
-    border-radius: 8px;
-}
-form .totals {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: left;
-    padding: 1rem 0 1rem 3rem;
-    color: #000000;
-}
-form .totals #assets, form .totals #liabilities{
-    text-align: left;
-    height: 45px;
-    background: #FFFFFF;
-    border: 4px solid #FFA500;
-    box-sizing: border-box;
-    border-radius: 8px;
-    padding: 0 2rem;
-}
-form .totals #assets {
-    margin-left: 2.4rem;
-}
-form .totals #liabilities {
-    margin-left: 0.4rem;
-}
-form #total {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.8rem;
-    width: 300px;
-    height: 50px;
-    margin: 0 auto;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    background: #FFA500;
+#display{
+    width: 30% !important;
+    margin-left: 35% !important;
+    background: #1AB188;
     box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    margin-bottom: 2rem;
+    color: #000000 !important;
 }
-form #clear-form{
-    width: 110px;
-    height: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    background: #FFA500;
-    box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    margin-left: 4rem;
-}
+<<<<<<< HEAD
 
 
 @media only screen and (max-width: 720px) {
@@ -245,4 +75,10 @@ form #clear-form{
         display: flex;
         flex-direction: column;
     }
+=======
+.copyright{
+    padding: 10px;
+    background-color: black !important;
+    color: white;
+>>>>>>> a528f9d488561c81a8d84096814a69f50d9b828a
 }
