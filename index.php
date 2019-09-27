@@ -4,14 +4,7 @@ include("process/login_process.php");
 
 include("process/signup_process.php");
 
-
-
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html >
     <head>
@@ -135,7 +128,7 @@ include("process/signup_process.php");
                                         <input
                                             type="text"
                                             name="email"
-                                            id="password1"
+                                            id="email"
                                             placeholder="Email"
                                             class="p-2 form-control form-control-lg color"
                                             style="background-color: transparent"

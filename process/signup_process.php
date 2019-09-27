@@ -77,11 +77,9 @@ if(isset($_POST["sign_up"])){
 	}
 	
 	
-		if($password_check === $confirm_password_check && $email && $first_name && last_name && mysqli_num_rows($result2) < 1){
-		$query = "INSERT INTO signup (id, first_name, last_name, email, password, signup_date
-)
-		
-				   VALUES (NULL, '$first_name', '$last_name', '$email', '$password',  CURRENT_TIMESTAMP)";
+		if($password_check === $confirm_password_check && $email && $first_name && $last_name && mysqli_num_rows($result2) < 1){
+		$query = "INSERT INTO signup (id, first_name, last_name, email, password, signup_date)
+					VALUES (NULL, '$first_name', '$last_name', '$email', '$password',  CURRENT_TIMESTAMP)";
 			
 			
 		
@@ -98,9 +96,6 @@ if(isset($_POST["sign_up"])){
 	
 
 }
-
-
-
 //LOGIN PROCESS
 	
 mysqli_close($conn);
