@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 100%;
+}
+.main{ 
+    background: #ffff;
+    width: 100%;
+}
+.first-block{
+position: absolute;
+width: 643px;
+height: 550px;
+left: 360px;
+top: 50px;
+background: #24323D;
+border: 3px solid rgba(17, 36, 19, 0.8);
+box-shadow: -27px 21px 15px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+}
+.second-block{
+position: absolute;   
+width:643px;
+height: 550px;
+left: 360px;
+top: 50px;
+background: #24323D;
+border: 3px solid rgba(17, 36, 19, 0.8);
+box-shadow: -27px 21px 15px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+    }
+.btn{
+    position: absolute;
+    height: 69px;
+    left: 18px;
+    top: -180px; 
+}
+.new-pass{
+position: relative;
+width: 573px;
+height: 67px;
+left: 14px;
+top: 319px;
+background: #24323D;
+border: 1px solid #E5E5E5;
+}
+.confirm-pass{
+position: relative;
+width: 573;
+height: 67px;
+left:14px;
+top: 350px;
+background: #24323D;
+border: 1px solid #E5E5E5;
+}
+
+h5,.reset{
+position: relative;
+width: 256px;
+left: 183px;
+top: 29px;
+font-family: Rationale;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+color:white;
+}
+h5,.create{
+    position: relative;
+    width: 304px;
+    height: 27px;
+    left: 155px;
+    top: 50px;
+    font-family: Rationale;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+.request{
+position: absolute;
+width: 249px;
+height: 22px;
+left: 185px;
+top: 150px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 21px;
+line-height: 22px;
+text-align: center;
+color: #FFFFFF;
+}
+input{
+    padding-left: 10px;
+}
+
+.email{
+position: absolute;
+width: 573px;
+height: 67px;
+left: 27px;
+top: 230px;
+background: #24323D;
+}
+.send{
+color: white;
+position: absolute;
+width: 573px;
+height: 67px;
+left: 27px;
+top: 350px;
+background: #1AB188;
+font-size: 140%;
+font-weight: bold;
+}
+.send-link{
+    position: relative;
+    top: -50px;
+}
+.send:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.login:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.sign-up1{
+position: absolute;
+width: 229px;
+height: 21px;
+left: 590px;
+top: 557px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+.sign-up2{
+    position: absolute;
+    width: 229px;
+    height: 21px;
+    left: 230px;
+    top: 518px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+.login{
+    position: absolute;
+    width: 573px;
+    height: 69px;
+    left:14px;
+    top: 552px;
+    color:white;
+    background: #1AB188;
+    font-size: 140%;
+    font-weight: bold;
+}

@@ -1,5 +1,17 @@
+<?php 
+session_start();
+if(!$_SESSION['calcuser']){
+	header("Location: index.php");
+}
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +49,7 @@
               <ul class="navbar-nav text-dark mr-3">
                     <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user-circle"></i><span class="font-weight-bold">Femi</span>
+                                <i class="fas fa-user-circle"></i><span class="font-weight-bold"><?php echo $_SESSION['calcuser']; ?></span>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: absolute;background-color: rgb(38, 155, 120)">
                             <option value="account">Account</option>
@@ -63,10 +75,10 @@
                       </div>
                     </li>
                   </ul>
-                  <a class="text-light font-weight-bold">Sign out</a>
+                  <a class="text-light font-weight-bold" href="logout.php">Sign out</a>
           </nav>
         <div class="container-fluid" style="background-color: rgb(65, 89, 94)">
-            <h3 class="text-center pt-1 h2 text-light">Welcome <span>Femi</span></h3>
+            <h3 class="text-center pt-1 h2 text-light">Welcome <span><?php echo $_SESSION['calcuser']; ?></span></h3>
             <div class="container-fluid bg-light">
                     <h3 class="text-center pt-3 text-dark">Net-Worth Calculator</h3>
                     <div class="row">
