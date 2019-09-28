@@ -1,6 +1,7 @@
 <?php 
 
 if(isset($_GET["email"]) && isset($_GET["token"])){
+	
 	$email = validateFormData($_GET["email"]);
 	$token = validateFormData($_GET["token"]);
 	
@@ -9,28 +10,41 @@ if(isset($_GET["email"]) && isset($_GET["token"])){
 	$result = mysqli_query($conn, $sql);
 	
 	if(mysqli_num_rows($result) > 0){
-		$token_valid = "this token is valid";
+		
+		$token_valid = 1;
 	}else{
-		$token_has_expired = "Password reset link expired";
+		$token_has_expired = "Password reset link expired or used";
 	}
 	
 }else{
-	redirectToLogin();
+	header("Location: index.php");
 }
 
 if(isset($_POST["reset_now"])){
 	
 	
-	if(empty($_POST["newpassword"])){
+	if(empty($_POST["newpassword1"])){
 		$send_reset_link_error = "New password required";
 	}else{
-		$new_password = password_hash(validateFormData($_POST["newpassword"]));
+		$new_password = validateFormData($_POST["newpassword"]);
+	}
+	
+		if(empty($_POST["newpassword2"])){
+		$send_reset_link_error = "New password required";
+	}else{
+		$new_password1 = validateFormData($_POST["newpassword"]);
 	}
 	
 	
-	if($token_valid && $new_password){
-		$sql2 = "UPDATE signup SET token = '$token', token_expire= DATE_ADD(NOW(), INTERVAL 5 MINUTE)
+	if($token_valid && $new_password === $new_password1 && !$send_reset_link_error){
+		
+			$new_password = password_hash(validateFormData($_POST["newpassword"]));
+
+		$sql2 = "UPDATE signup SET password = '$new_password', token_expire= -1
 WHERE email = '$email'";
+	}else{
+	$token_has_expired = "Password reset link expired or used";
+
 	}
 }
 

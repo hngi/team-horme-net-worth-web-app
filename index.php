@@ -115,7 +115,7 @@ include("process/signup_process.php");
                                                 id="firstName"
                                                 placeholder="First name"
                                                 class="p-2 form-control form-control-lg color col-sm-12 col-md-12 mt-3"
-                                                style="background-color: transparent"
+                                                style="background-color: transparent; color: white;"
                                             />
                                         </div>
                                         <div class="form-inline col-md-6 mt-3">
@@ -125,7 +125,7 @@ include("process/signup_process.php");
                                                 id="secondName"
                                                 placeholder="Last name"
                                                 class="p-2 form-control form-control-lg color ml-md-auto mt-md-0 col-sm-12 col-md-12 "
-                                                style="background-color: transparent"
+                                                style="background-color: transparent; color: white;"
                                             />
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@ include("process/signup_process.php");
                                             id="password1"
                                             placeholder="Email"
                                             class="p-2 form-control form-control-lg color"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
                                     
@@ -150,19 +150,19 @@ include("process/signup_process.php");
                                             id="password1"
                                             placeholder="Password"
                                             class="p-2 form-control form-control-lg color"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
                                     
                                     <div class="form-group m-1 mt-3">
 									<small style="color:red; font-size:12px"> <?php echo $confirm_password_error; ?></small>
                                         <input
-                                            type="text"
+                                            type="password"
                                             name="confirmpassword"
                                             id="password1"
                                             placeholder="Confirm password"
                                             class="p-2 form-control form-control-lg color"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
 
@@ -198,7 +198,7 @@ include("process/signup_process.php");
                                             id="Username"
                                             placeholder="Email"
                                             class=" form-control form-control-lg color mt-3 col-sm-12"
-                                            style="background-color: transparent;"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
                                     <small style="color:red; font-size:12px"><?php echo $form_password_error; ?></small>
@@ -209,7 +209,7 @@ include("process/signup_process.php");
                                             id="password1"
                                             placeholder="Password"
                                             class="p-2 form-control form-control-lg color col-sm-12"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
 
@@ -222,7 +222,7 @@ include("process/signup_process.php");
                                             style="background-color: rgb(38, 155, 120)"
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
-                                        <a href="#" class="text-light"
+                                        <a href="reset.php" class="text-light"
                                             ><p>Forgot password?</p></a
                                         >
                                     </div>

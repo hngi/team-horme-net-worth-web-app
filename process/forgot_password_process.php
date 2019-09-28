@@ -37,7 +37,7 @@ WHERE email = '$email'";
 				To reset your password please click on the link below:<br>
 					<em>Please note that this password reset link will expire in the next 5mins</em><br>
 				
-				<a href='http://teamhorme.diaticine.com/reset_password.php?email=$email&token=$token'>http://teamhorme.diaticine.com/forget-password.php?email=$email&token=$token</a><br>
+				<a href='http://teamhorme.diaticine.com/createpassword.php?email=$email&token=$token'>http://teamhorme.diaticine.com/createpassword.php?email=$email&token=$token</a><br>
 				
 			
 				<p>Regards,</p>

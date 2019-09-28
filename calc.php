@@ -9,9 +9,8 @@ if(!$_SESSION['calcuser']){
 
 
 
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -93,7 +92,7 @@ if(!$_SESSION['calcuser']){
                                                         <span class="float-right h4 mr-auto">MONETARY WORTH</span>
                                           
                                          </nav>
-                                         <form action="" method="" class="justify-content-center m-auto">
+                                         <form id="asset-form" class="justify-content-center m-auto">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group m-2">
@@ -103,104 +102,40 @@ if(!$_SESSION['calcuser']){
                                                                 id="value"
                                                                 placeholder="Asset 1"
                                                                 class="p-4 form-control form-control-lg pl-5"
-                                                                required
                                                             />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group m-2">
                                                             <input
-                                                                type="text"
+                                                                type="number"
                                                                 name="value"
                                                                 id="value"
                                                                 placeholder=" ASSET 1 monetary worth"
-                                                                class="p-4 form-control form-control-lg pl-5"
+                                                                onchange="updateTotalAsset()"
+                                                                class="p-4 form-control asset-value form-control-lg pl-5"
                                                                 required
                                                             />
                                                         </div>
-                                                    </div> 
-                                                        <div class="col-md-6">
-                                                                <div class="form-group m-2">
-                                                                    <input
-                                                                        type="text"
-                                                                        name="value"
-                                                                        id="value"
-                                                                        placeholder=" Asset 2"
-                                                                        class="p-4 form-control form-control-lg pl-5"
-                                                                        required
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group m-2">
-                                                                    <input
-                                                                        type="text"
-                                                                        name="value"
-                                                                        id="value"
-                                                                        placeholder="  ASSET 2 monetary worth"
-                                                                        class="p-4 form-control form-control-lg pl-5"
-                                                                        required
-                                                                    />
-                                                                </div>
-                                                            </div> 
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group m-2">
-                                                                        <input
-                                                                            type="text"
-                                                                            name="value"
-                                                                            id="value"
-                                                                            placeholder=" Asset 3"
-                                                                            class="p-4 form-control form-control-lg pl-5"
-                                                                            required
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group m-2">
-                                                                        <input
-                                                                            type="text"
-                                                                            name="value"
-                                                                            id="value"
-                                                                            placeholder="  ASSET 3 monetary worth"
-                                                                            class="p-4 form-control form-control-lg pl-5"
-                                                                            required
-                                                                        />
-                                                                    </div>
-                                                                </div> 
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group m-2">
-                                                                            <input
-                                                                                type="text"
-                                                                                name="value"
-                                                                                id="value"
-                                                                                placeholder=" Asset 4"
-                                                                                class="p-4 form-control form-control-lg pl-5"
-                                                                                required
-                                                                            />
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group m-2">
-                                                                            <input
-                                                                                type="text"
-                                                                                name="value"
-                                                                                id="value"
-                                                                                placeholder="  ASSET 4 monetary worth"
-                                                                                class="p-4 form-control form-control-lg pl-5"
-                                                                                required
-                                                                            />
-                                                                        </div>
-                                                                    </div>                                       
+                                                    </div>
                                                 </div>
                                                 <div class="form-group p-2">
                                                     <input
-                                                        type="submit"
-                                                        name="submit"
-                                                        id="submit"
+                                                        type="button"
+                                                        name="button"
+                                                        id="button"
+                                                        onclick="assetReset()"
+                                                        onchange="assetReset()"
                                                         value="CLEAR"
-                                                        class="p-2 btn col-8 col-md-1 text-light font-weight-bold"
+                                                        class="p-2 btn text-light font-weight-bold"
                                                         style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
                                                     />
+
+                                                    <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newAssetField()">Add an Asset</div>
+
+                                                    <div class="row d-flex mt-3 justify-content-center">
+                                                        <div class="p-3 btn-primary"  style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Total Asset: NGN <span id="total-asset"></span></div>
+                                                    </div>
                                                 </div>
                                             </form>
                         </div>
@@ -217,7 +152,7 @@ if(!$_SESSION['calcuser']){
                                                                 <span class="float-right h4 mr-auto">MONETARY WORTH</span>
                                                   
                                                  </nav>
-                                             <form action="" method="" class="justify-content-center m-auto">
+                                             <form id="liability-form" action="" method="" class="justify-content-center m-auto">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group m-2">
@@ -227,114 +162,53 @@ if(!$_SESSION['calcuser']){
                                                                     id="value"
                                                                     placeholder=" Liability 1"
                                                                     class="p-4 form-control form-control-lg pl-5"
-                                                                    required
                                                                 />
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group m-2">
                                                                 <input
-                                                                    type="text"
+                                                                    type="number"
                                                                     name="value"
                                                                     id="value"
                                                                     placeholder="LIABILITY 1 monetary worth"
-                                                                    class="p-4 form-control form-control-lg pl-5"
+                                                                    onchange="updateTotalLiability()"
+                                                                    class="p-4 form-control liability-value form-control-lg pl-5"
                                                                     required
                                                                 />
                                                             </div>
-                                                        </div> 
-                                                            <div class="col-md-6">
-                                                                    <div class="form-group m-2">
-                                                                        <input
-                                                                            type="text"
-                                                                            name="value"
-                                                                            id="value"
-                                                                            placeholder="  Liability 2"
-                                                                            class="p-4 form-control form-control-lg pl-5"
-                                                                            required
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group m-2">
-                                                                        <input
-                                                                            type="text"
-                                                                            name="value"
-                                                                            id="value"
-                                                                            placeholder=" LIABILITY 2 monetary worth"
-                                                                            class="p-4 form-control form-control-lg pl-5"
-                                                                            required
-                                                                        />
-                                                                    </div>
-                                                                </div> 
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group m-2">
-                                                                            <input
-                                                                                type="text"
-                                                                                name="value"
-                                                                                id="value"
-                                                                                placeholder="  Liability 3"
-                                                                                class="p-4 form-control form-control-lg pl-5"
-                                                                                required
-                                                                            />
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group m-2">
-                                                                            <input
-                                                                                type="text"
-                                                                                name="value"
-                                                                                id="value"
-                                                                                placeholder=" LIABILITY 3 monetary worth"
-                                                                                class="p-4 form-control form-control-lg pl-5"
-                                                                                required
-                                                                            />
-                                                                        </div>
-                                                                    </div> 
-                                                                        <div class="col-md-6">
-                                                                            <div class="form-group m-2">
-                                                                                <input
-                                                                                    type="text"
-                                                                                    name="value"
-                                                                                    id="value"
-                                                                                    placeholder="  Liability 4"
-                                                                                    class="p-4 form-control form-control-lg pl-5"
-                                                                                    required
-                                                                                />
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="form-group m-2">
-                                                                                <input
-                                                                                    type="text"
-                                                                                    name="value"
-                                                                                    id="value"
-                                                                                    placeholder=" LIABILITY 4 monetary worth"
-                                                                                    class="p-4 form-control form-control-lg pl-5"
-                                                                                    required
-                                                                                />
-                                                                            </div>
-                                                                        </div>                                       
+                                                        </div>                           
                                                     </div>
                                                     <div class="form-group p-2">
-                                                        <input
-                                                            type="submit"
-                                                            name="submit"
-                                                            id="submit"
+                                                         <input
+                                                            type="button"
+                                                            name="button"
+                                                            id="button"
+                                                            onclick="liabilityReset()"
+                                                            onchange="liabilityReset()"
                                                             value="CLEAR"
-                                                            class="p-2 btn col-8 col-md-1 text-light font-weight-bold"
+                                                            class="p-2 btn text-light font-weight-bold"
                                                             style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
                                                         />
+
+
+                                                        <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newLiabilityField()">Add a Liability</div>
+
+                                                        <div class="row d-flex mt-3 justify-content-center">
+                                                            <div class="p-3 btn-primary"  style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Total Liability: NGN<span id="total-liability"></span></div>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group col-9 col-md-3 mb-5 mt-3 m-auto">
                                                         
-                                                    <a href="#" class="btn pr-3 p-md-3 p-sm-2 pl-0 text-light text-center mb-5 col-12 mt-4" style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black ">Your total net worth:</a>
+                                                    <a href="#" class="btn pr-3 p-md-3 p-sm-2 pl-0 text-light text-center mb-5 col-12 mt-4" style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Your total net worth: NGN<span id="net-worth"></span></a>
                                                     </div>
                                                 </form>
                             </div>
                         </div>
             </div>
         </div>
+        
+        <script src="./calculator.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="./app.js"></script>
