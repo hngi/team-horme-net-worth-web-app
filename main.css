@@ -85,3 +85,12 @@ img {
 .dropdown-menu {
     min-width: 2rem !important;
 }
+
+.currency-display h4 {
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+
+#currency-dropdown .dropdown-item{
+    cursor: pointer;
+}
