@@ -230,7 +230,7 @@ include("process/signup_process.php");
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="./app.js"></script>
+        <script src="./calc.js"></script>
         <script src="./validate.js"></script>
     </body>
 </html>
