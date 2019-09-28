@@ -1,5 +1,17 @@
+<?php 
+session_start();
+if(!$_SESSION['calcuser']){
+	header("Location: index.php");
+}
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +49,7 @@
               <ul class="navbar-nav text-dark mr-3">
                     <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user-circle"></i><span class="font-weight-bold">Femi</span>
+                                <i class="fas fa-user-circle"></i><span class="font-weight-bold"><?php echo $_SESSION['calcuser']; ?></span>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: absolute;background-color: rgb(38, 155, 120)">
                             <option value="account">Account</option>
@@ -63,10 +75,10 @@
                       </div>
                     </li>
                   </ul>
-                  <a class="text-light font-weight-bold">Sign out</a>
+                  <a class="text-light font-weight-bold" href="logout.php">Sign out</a>
           </nav>
         <div class="container-fluid" style="background-color: rgb(65, 89, 94)">
-            <h3 class="text-center pt-1 h2 text-light">Welcome <span>Femi</span></h3>
+            <h3 class="text-center pt-1 h2 text-light">Welcome <span><?php echo $_SESSION['calcuser']; ?></span></h3>
             <div class="container-fluid bg-light">
                     <h3 class="text-center pt-3 text-dark">Net-Worth Calculator</h3>
                     <div class="row">
@@ -81,44 +93,38 @@
                                                         <span class="float-right h4 mr-auto">MONETARY WORTH</span>
                                           
                                          </nav>
-                                         <form id="asset-form" class="justify-content-center m-auto">
+                                         <form action="" method="" class="justify-content-center m-auto">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group m-2">
                                                             <input
                                                                 type="text"
                                                                 name="value"
-                                                                id="asset-value"
+                                                                id="value"
                                                                 placeholder="Asset 1"
                                                                 class="p-4 form-control form-control-lg pl-5"
+                                                                required
                                                             />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group m-2">
                                                             <input
-                                                                type="number"
+                                                                type="text"
                                                                 name="value"
-                                                                id="asset-value"
+                                                                id="value"
                                                                 placeholder=" ASSET 1 monetary worth"
-<<<<<<< HEAD
-                                                                class="p-4 form-control form-control-lg pl-5 calc"
-=======
-                                                                onchange="updateTotalAsset()"
-                                                                class="p-4 form-control asset-value form-control-lg pl-5"
->>>>>>> d4acc8209260c769ddb2b0dedd410af40d19da1d
+                                                                class="p-4 form-control form-control-lg pl-5"
                                                                 required
-                                                                onblur="rejectNegatives(this)"
                                                             />
                                                         </div>
-<<<<<<< HEAD
                                                     </div> 
                                                         <div class="col-md-6">
                                                                 <div class="form-group m-2">
                                                                     <input
                                                                         type="text"
                                                                         name="value"
-                                                                        id="asset-value"
+                                                                        id="value"
                                                                         placeholder=" Asset 2"
                                                                         class="p-4 form-control form-control-lg pl-5"
                                                                         required
@@ -128,13 +134,12 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group m-2">
                                                                     <input
-                                                                        type="number"
+                                                                        type="text"
                                                                         name="value"
-                                                                        id="asset-value"
+                                                                        id="value"
                                                                         placeholder="  ASSET 2 monetary worth"
-                                                                        class="p-4 form-control form-control-lg pl-5 calc"
+                                                                        class="p-4 form-control form-control-lg pl-5"
                                                                         required
-                                                                        onblur="rejectNegatives(this)"
                                                                     />
                                                                 </div>
                                                             </div> 
@@ -143,7 +148,7 @@
                                                                         <input
                                                                             type="text"
                                                                             name="value"
-                                                                            id="asset-value"
+                                                                            id="value"
                                                                             placeholder=" Asset 3"
                                                                             class="p-4 form-control form-control-lg pl-5"
                                                                             required
@@ -153,13 +158,12 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group m-2">
                                                                         <input
-                                                                            type="number"
+                                                                            type="text"
                                                                             name="value"
-                                                                            id="asset-value"
+                                                                            id="value"
                                                                             placeholder="  ASSET 3 monetary worth"
-                                                                            class="p-4 form-control form-control-lg pl-5 calc"
+                                                                            class="p-4 form-control form-control-lg pl-5"
                                                                             required
-                                                                            onblur="rejectNegatives(this)"
                                                                         />
                                                                     </div>
                                                                 </div> 
@@ -168,7 +172,7 @@
                                                                             <input
                                                                                 type="text"
                                                                                 name="value"
-                                                                                id="asset-value"
+                                                                                id="value"
                                                                                 placeholder=" Asset 4"
                                                                                 class="p-4 form-control form-control-lg pl-5"
                                                                                 required
@@ -178,46 +182,25 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group m-2">
                                                                             <input
-                                                                                type="number"
+                                                                                type="text"
                                                                                 name="value"
-                                                                                id="asset-value"
+                                                                                id="value"
                                                                                 placeholder="  ASSET 4 monetary worth"
-                                                                                class="p-4 form-control form-control-lg pl-5 calc"
+                                                                                class="p-4 form-control form-control-lg pl-5"
                                                                                 required
-                                                                                onblur="rejectNegatives(this)"
                                                                             />
                                                                         </div>
                                                                     </div>                                       
-=======
-                                                    </div>
->>>>>>> d4acc8209260c769ddb2b0dedd410af40d19da1d
                                                 </div>
                                                 <div class="form-group p-2">
                                                     <input
-                                                        type="button"
-                                                        name="button"
-                                                        id="button"
-                                                        onclick="assetReset()"
-                                                        onchange="assetReset()"
+                                                        type="submit"
+                                                        name="submit"
+                                                        id="submit"
                                                         value="CLEAR"
-<<<<<<< HEAD
-                                                        class="p-2 btn col-4 col-md-1 text-light font-weight-bold clear-asset"
+                                                        class="p-2 btn col-8 col-md-1 text-light font-weight-bold"
                                                         style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
                                                     />
-                                                    <div style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
-                                                             class="p-2 btn col-5 col-md-4 text-light font-weight-bold total-asset">
-                                                             Total Asset
-=======
-                                                        class="p-2 btn text-light font-weight-bold"
-                                                        style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
-                                                    />
-
-                                                    <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newAssetField()">Add an Asset</div>
-
-                                                    <div class="row d-flex mt-3 justify-content-center">
-                                                        <div class="p-3 btn-primary"  style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Total Asset: NGN <span id="total-asset"></span></div>
->>>>>>> d4acc8209260c769ddb2b0dedd410af40d19da1d
-                                                    </div>
                                                 </div>
                                             </form>
                         </div>
@@ -234,44 +217,38 @@
                                                                 <span class="float-right h4 mr-auto">MONETARY WORTH</span>
                                                   
                                                  </nav>
-                                             <form id="liability-form" action="" method="" class="justify-content-center m-auto">
+                                             <form action="" method="" class="justify-content-center m-auto">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group m-2">
                                                                 <input
                                                                     type="text"
                                                                     name="value"
-                                                                    id="liability-value"
+                                                                    id="value"
                                                                     placeholder=" Liability 1"
                                                                     class="p-4 form-control form-control-lg pl-5"
+                                                                    required
                                                                 />
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group m-2">
                                                                 <input
-                                                                    type="number"
+                                                                    type="text"
                                                                     name="value"
-                                                                    id="liability-value"
+                                                                    id="value"
                                                                     placeholder="LIABILITY 1 monetary worth"
-<<<<<<< HEAD
-                                                                    class="p-4 form-control form-control-lg pl-5 calc2"
-=======
-                                                                    onchange="updateTotalLiability()"
-                                                                    class="p-4 form-control liability-value form-control-lg pl-5"
->>>>>>> d4acc8209260c769ddb2b0dedd410af40d19da1d
+                                                                    class="p-4 form-control form-control-lg pl-5"
                                                                     required
-                                                                    onblur="rejectNegatives(this)"
                                                                 />
                                                             </div>
-<<<<<<< HEAD
                                                         </div> 
                                                             <div class="col-md-6">
                                                                     <div class="form-group m-2">
                                                                         <input
                                                                             type="text"
                                                                             name="value"
-                                                                            id="liability-value"
+                                                                            id="value"
                                                                             placeholder="  Liability 2"
                                                                             class="p-4 form-control form-control-lg pl-5"
                                                                             required
@@ -281,13 +258,12 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group m-2">
                                                                         <input
-                                                                            type="number"
+                                                                            type="text"
                                                                             name="value"
-                                                                            id="liability-value"
+                                                                            id="value"
                                                                             placeholder=" LIABILITY 2 monetary worth"
-                                                                            class="p-4 form-control form-control-lg pl-5 calc2"
+                                                                            class="p-4 form-control form-control-lg pl-5"
                                                                             required
-                                                                            onblur="rejectNegatives(this)"
                                                                         />
                                                                     </div>
                                                                 </div> 
@@ -296,7 +272,7 @@
                                                                             <input
                                                                                 type="text"
                                                                                 name="value"
-                                                                                id="liability-value"
+                                                                                id="value"
                                                                                 placeholder="  Liability 3"
                                                                                 class="p-4 form-control form-control-lg pl-5"
                                                                                 required
@@ -306,13 +282,12 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group m-2">
                                                                             <input
-                                                                                type="number"
+                                                                                type="text"
                                                                                 name="value"
-                                                                                id="liability-value"
+                                                                                id="value"
                                                                                 placeholder=" LIABILITY 3 monetary worth"
-                                                                                class="p-4 form-control form-control-lg pl-5 calc2"
+                                                                                class="p-4 form-control form-control-lg pl-5"
                                                                                 required
-                                                                                onblur="rejectNegatives(this)"
                                                                             />
                                                                         </div>
                                                                     </div> 
@@ -321,7 +296,7 @@
                                                                                 <input
                                                                                     type="text"
                                                                                     name="value"
-                                                                                    id="liability-value"
+                                                                                    id="value"
                                                                                     placeholder="  Liability 4"
                                                                                     class="p-4 form-control form-control-lg pl-5"
                                                                                     required
@@ -331,67 +306,37 @@
                                                                         <div class="col-md-6">
                                                                             <div class="form-group m-2">
                                                                                 <input
-                                                                                    type="number"
+                                                                                    type="text"
                                                                                     name="value"
-                                                                                    id="liability-value"
+                                                                                    id="value"
                                                                                     placeholder=" LIABILITY 4 monetary worth"
-                                                                                    class="p-4 form-control form-control-lg pl-5 calc2"
+                                                                                    class="p-4 form-control form-control-lg pl-5"
                                                                                     required
-                                                                                    onblur="rejectNegatives(this)"
                                                                                 />
                                                                             </div>
                                                                         </div>                                       
-=======
-                                                        </div>                           
->>>>>>> d4acc8209260c769ddb2b0dedd410af40d19da1d
                                                     </div>
                                                     <div class="form-group p-2">
-                                                         <input
-                                                            type="button"
-                                                            name="button"
-                                                            id="button"
-                                                            onclick="liabilityReset()"
-                                                            onchange="liabilityReset()"
+                                                        <input
+                                                            type="submit"
+                                                            name="submit"
+                                                            id="submit"
                                                             value="CLEAR"
-<<<<<<< HEAD
-                                                            class="p-2 btn col-4 col-md-1 text-light font-weight-bold clear-liability"
+                                                            class="p-2 btn col-8 col-md-1 text-light font-weight-bold"
                                                             style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
                                                         />
-                                                          <div style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
-                                                             class="p-2 btn col-5 col-md-4 text-light font-weight-bold total-liability">
-                                                             Total Liability
-=======
-                                                            class="p-2 btn text-light font-weight-bold"
-                                                            style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black"
-                                                        />
-
-
-                                                        <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newLiabilityField()">Add a Liability</div>
-
-                                                        <div class="row d-flex mt-3 justify-content-center">
-                                                            <div class="p-3 btn-primary"  style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Total Liability: NGN<span id="total-liability"></span></div>
->>>>>>> d4acc8209260c769ddb2b0dedd410af40d19da1d
-                                                        </div>
                                                     </div>
-                                                    
-                                                    <div class="form-group col-9 col-md-4 mb-5 mt-3 m-auto">
+                                                    <div class="form-group col-9 col-md-3 mb-5 mt-3 m-auto">
                                                         
-<<<<<<< HEAD
-                                                    <div class="btn pr-3 p-md-3 p-sm-2 pl-0 text-light text-center mb-5 col-12 mt-4 total" style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black ">Your total net worth:</div>
-=======
-                                                    <a href="#" class="btn pr-3 p-md-3 p-sm-2 pl-0 text-light text-center mb-5 col-12 mt-4" style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Your total net worth: NGN<span id="net-worth"></span></a>
->>>>>>> d4acc8209260c769ddb2b0dedd410af40d19da1d
+                                                    <a href="#" class="btn pr-3 p-md-3 p-sm-2 pl-0 text-light text-center mb-5 col-12 mt-4" style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black ">Your total net worth:</a>
                                                     </div>
                                                 </form>
                             </div>
                         </div>
             </div>
         </div>
-        
-        <script src="./calculator.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <!-- <script src="./app.js"></script> -->
-        <script src="./calc.js"></script>
+        <script src="./app.js"></script>
     </body>
 </html>

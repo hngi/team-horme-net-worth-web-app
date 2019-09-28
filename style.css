@@ -67,18 +67,9 @@ p{
     border-radius: 8px;
     color: #000000 !important;
 }
-<<<<<<< HEAD
 
-
-@media only screen and (max-width: 720px) {
-    form #assetLiability {
-        display: flex;
-        flex-direction: column;
-    }
-=======
 .copyright{
     padding: 10px;
     background-color: black !important;
     color: white;
->>>>>>> a528f9d488561c81a8d84096814a69f50d9b828a
 }
