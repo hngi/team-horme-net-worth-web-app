@@ -1,10 +1,6 @@
-const signupForm = document.getElementById('signUp');
-const signinForm = document.getElementById('signIn');
 const pass = document.querySelectorAll('#password1');
-const firstname = document.getElementById('firstName').value;
-const lastname = document.getElementById('secondName').value;
-const loginemail = document.getElementById('Username').value;
 const submit = document.querySelectorAll('input[type=submit]');
+const errDiv = document.querySelectorAll("div[role=alert]");
 
 
 //check for empty values
@@ -12,9 +8,14 @@ const submit = document.querySelectorAll('input[type=submit]');
 //use fetch to submit to php file
 
 
-submit[0].addEventListener('submit', (e) => {
+submit[0].addEventListener('click', (e) => {
     e.preventDefault();
-    const email = document.querySelector('input[type=email]').value;
+    console.log('sign up event triggered');
+    const email = document.querySelector('#email').value;
+    const firstname = document.getElementById('firstName').value;
+    const lastname = document.getElementById('secondName').value;
+    console.log(firstname);
+    const signupForm = document.getElementById('signUp');
 
     let formattedFormData = new FormData(signupForm);
     //Append the input data
@@ -36,10 +37,15 @@ submit[0].addEventListener('submit', (e) => {
         //Handle PHP Response respectively
         // alert(data);
         if (data === 'REGD_SUCCESS') {
-            alert('Registration Successful, you shall be redirected to the Dashboard');
-            setTimeout(() => { window.location = 'calc.html'; }, 4000)
+            console.log(data);
+            alert("Registration Successful, you shall be redirected to the Dashboard");
+            setTimeout(() => { window.location = 'calc.html'; }, 4000);
         } else {
-            return false;
+            //btn btn-danger
+            //alert alert-danger
+            console.log(data);
+            //alert(data);
+            console.log(data);
         }
     }
 
@@ -48,33 +54,36 @@ submit[0].addEventListener('submit', (e) => {
 });
 
 //validation for Sign In 
-// submit_btn[1].addEventListener('click', (e) => {
-//     console.log('sign in event triggered');
-//     e.preventDefault();
+submit[1].addEventListener('click', (e) => {
+    console.log('sign in event triggered');
+    e.preventDefault();
+    const loginemail = document.getElementById('Username').value;
+    const signinForm = document.getElementById('signIn');
+    let formattedFormData = new FormData(signinForm);
+    //Append the input data
+    formattedFormData.append('loginemail', loginemail);
+    formattedFormData.append('password', pass[2].value);
+    formattedFormData.append('loginapp', submit[1]);
 
-//     let formattedFormData = new FormData(form[1]);
-//     //Append the input data
-//     formattedFormData.append('email', email[1].value);
-//     formattedFormData.append('password', pass[2].value);
-//     formattedFormData.append('submit', submit_btn[1]);
 
+    async function fetchData(dataForm) {
+        const response = await fetch('process/login_process.php', {
+            method: 'POST',
+            body: dataForm
+        });
+        console.log(response);
+        const data = await response.text();
+        //Show an alert of successful registration based on PHP output
+        // alert(data);
+        if (data === 'ALREADY_LOGGED_IN' || data === 'LOG_IN') {
+            alert("Success");
+            setTimeout(() => { window.location = 'calc.html'; }, 4000)
+        } else {
+            alert(data);
+            console.log(data);
+        }
+    }
 
-//     async function fetchData(dataForm) {
-//         const response = await fetch('login.php', {
-//             method: 'POST',
-//             body: dataForm
-//         });
-//         console.log(response);
-//         const data = await response.text();
-//         //Show an alert of successful registration based on PHP output
-//         // alert(data);
-//         if (data === 'ALREADY_LOGGED_IN' || data === 'LOG_IN') {
-//             window.location = 'dashboard.php';
-//         } else {
-//             err1(data, false);
-//         }
-//     }
-
-//     //Initialize fetch
-//     fetchData(formattedFormData);
-// });
+    //Initialize fetch
+    fetchData(formattedFormData);
+});

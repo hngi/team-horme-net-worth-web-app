@@ -1,5 +1,4 @@
 <?php
-include("process/connection.php");
 include("process/login_process.php");
 
 include("process/signup_process.php");
@@ -98,6 +97,7 @@ include("process/signup_process.php");
                             <h5 class="text-light h5 mt-4">Sign up for free</h5>
                             <div class="row">
                                 <div class="col">
+                                <div role="alert"></div>
                                    <small style="color:red; font-size:12px"> <?php echo $first_name_error; ?></small>
 								   <br><small style="color:red; font-size:12px"> <?php echo $last_name_error; ?></small>
                                     <div class="row">
@@ -183,6 +183,7 @@ include("process/signup_process.php");
                             <h5 class="text-light h5 mt-3">Welcome Back!</h5>
                             <div class="row">
                                 <div class="col">
+                                <div role="alert"></div>
                                    <small style="color:red; font-size:12px"><?php echo $form_email_error; ?></small>
                                     <div class="form-group">
                                         <input
@@ -229,5 +230,6 @@ include("process/signup_process.php");
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="./app.js"></script>
+        <script src="./validate.js"></script>
     </body>
 </html>
