@@ -1,5 +1,6 @@
 <<<<<<< HEAD:index.php
 <?php
+include("process/connection.php");
 include("process/login_process.php");
 
 include("process/signup_process.php");
@@ -139,7 +140,7 @@ include("process/signup_process.php");
                                     <div class="form-group m-1 mt-3">
                                        <small style="color:red; font-size:12px"> <?php echo $password_error; ?></small>
                                         <input
-                                            type="text"
+                                            type="password"
                                             name="password"
                                             id="password1"
                                             placeholder="Password"
@@ -424,7 +425,7 @@ include("process/signup_process.php");
                                     <div class="form-group pt-3">
                                         <input
                                             type="submit"
-                                            name="submit"
+                                            name="loginapp"
                                             id="sign-in"
                                             value="Sign in"
                                             style="background-color: rgb(38, 155, 120)"
@@ -446,4 +447,4 @@ include("process/signup_process.php");
         <script src="./app.js"></script>
     </body>
 </html>
->>>>>>> bc4e949c57d1a201cc5612d8294a7ff945f0a26c:index.html
+>>>> bc4e949c57d1a201cc5612d8294a7ff945f0a26c:index.html

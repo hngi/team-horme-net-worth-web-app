@@ -1,6 +1,5 @@
 <?php
 
-require("../process/connection.php");
 
 $first_name_check = $last_name_check = $email_check = $password_check = $confirm_password_check ="";
 $first_name_error = $last_name_error = $email_error = $password_error = $confirm_password_error ="";

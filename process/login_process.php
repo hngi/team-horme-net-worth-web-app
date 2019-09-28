@@ -1,6 +1,5 @@
 <?php 
 
-require("../process/connection.php");
 
 $form_email_error = $form_password_error ="";
 $login_email = $login_password ="";
