@@ -22,4 +22,6 @@ Clone this repo and install all dependencies.
 ### Hosted on
 * [Team Horme](http://hngteamhorme.diaticine.com/index.php)
 
-![][https://res.cloudinary.com/dvbwpicno/image/upload/v1569718330/humfv3xkyamj39piogq3.png]
+<img src="https://res.cloudinary.com/dvbwpicno/image/upload/v1569718330/humfv3xkyamj39piogq3.png"
+     alt="Team horme(net-worth) welcome page"
+     />
