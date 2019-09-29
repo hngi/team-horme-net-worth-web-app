@@ -1,9 +1,9 @@
 
 <?php
 	$server		 = 'localhost';
-	$user		 = 'natocwgt_teamhorme';
-	$password	 = '**&&%&*9&*65uej65G%%';
-	$db			 = 'natocwgt_networth';
+	$user		 = 'root';
+	$password	 = 'root';
+	$db			 = 'networth';
 
 	$conn		 = mysqli_connect($server, $user, $password, $db);
 
