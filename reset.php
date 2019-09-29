@@ -1,3 +1,10 @@
+<?php
+include("process/connection.php");
+include("process/forgot_password_process.php");
+?>
+
+
+
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -117,21 +124,23 @@
 	<body>    
 	<div class="container">
         <!--Form Container-->
-            <form action=" " method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> " method="post">
                     <!--Title-->
                     <span class="modal-title">Reset Your Password</span>
-                    <span class="modal-title2">Request an email reset link</span>
+                    <span class="modal-title2">Request a password reset code</span>
 
                     <div class="form_container input-field1">
-                        <input type="text" class="form-control input_user" value="" placeholder="Email Address *" style="color:white;">
+                        <span style="color:red; font-size: 12px;"><?php echo $send_reset_link_error;?></span>
+                        <span style="color:green; font-size: 12px;"><?php echo $success;?></span>
+                        <input type="text" name="sendemail" class="form-control input_user" value="" placeholder="Email Address *" style="color:white;">
                     </div>
 
                     <div class="send_button">
-                    <button type="button" name="button" class="btn btn-block btn-lg">Send Link</button>
+                    <button type="submit" name="send_link" class="btn btn-block btn-lg">Send Code</button>
                     </div> <br>
             
                     
-                    <div class="text-center small footer">Not yet Registered? <a href="#" class="bottom_signup"> Sign up</a></div>
+                    <div class="text-center small footer">Not yet Registered? <a href="index.php" class="bottom_signup"> <a href="index.php">Sign in/Sign up</a></div>
 </form>
 	</div>
 	</body>

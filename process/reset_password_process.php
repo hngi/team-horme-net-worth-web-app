@@ -1,51 +1,54 @@
 <?php 
 
-if(isset($_GET["email"]) && isset($_GET["token"])){
-	
-	$email = validateFormData($_GET["email"]);
-	$token = validateFormData($_GET["token"]);
-	
-	$sql = "SELECT id FROM signup WHERE email = '$email' AND token ='$token' AND token<>'' AND token_expire > NOW()";
-	
-	$result = mysqli_query($conn, $sql);
-	
-	if(mysqli_num_rows($result) > 0){
-		
-		$token_valid = 1;
+include("functions.php");
+
+
+
+if(isset($_POST["resetnow"])){
+    
+
+	if(empty($_POST["tokencode"])){
+		$token_code_error = "Please input a valid password reset code";
 	}else{
-		$token_has_expired = "Password reset link expired or used";
+		$token_code = validateFormData($_POST["tokencode"]);
 	}
 	
-}else{
-	header("Location: index.php");
-}
-
-if(isset($_POST["reset_now"])){
-	
-	
-	if(empty($_POST["newpassword1"])){
-		$send_reset_link_error = "New password required";
+		if(empty($_POST["newpassword"])){
+		$new_password_error = "New password required";
 	}else{
 		$new_password = validateFormData($_POST["newpassword"]);
 	}
-	
-		if(empty($_POST["newpassword2"])){
-		$send_reset_link_error = "New password required";
-	}else{
-		$new_password1 = validateFormData($_POST["newpassword"]);
-	}
-	
-	
-	if($token_valid && $new_password === $new_password1 && !$send_reset_link_error){
+
+    if($token_code && $new_password){
+    $sql9 = "SELECT * FROM signup WHERE token = '$token_code' AND token_expire > NOW() AND token <>''";
+    
+    	$result9 = mysqli_query($conn, $sql9);
+    	
+    	  if(mysqli_num_rows($result9) > 0){
+        
 		
-			$new_password = password_hash(validateFormData($_POST["newpassword"]));
+			$update_password = password_hash(validateFormData($_POST["newpassword"]), PASSWORD_DEFAULT);
+			
+		
 
-		$sql2 = "UPDATE signup SET password = '$new_password', token_expire= -1
-WHERE email = '$email'";
-	}else{
-	$token_has_expired = "Password reset link expired or used";
+		$sql2 ="UPDATE signup SET password = '$update_password', token_expire= NOW() WHERE token = '$token_code'";
 
-	}
+        $result2 = mysqli_query($conn, $sql2);
+        
+        if($result2){
+            $success = "Password updated successfully!";
+        }
+        
+        
+	
+}else{
+    $failure = "Sorry code expired or used";
+}
+    	
+    	
+    }
+	
+
 }
 
 
