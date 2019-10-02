@@ -1,5 +1,5 @@
 <?php
-include("functions.php");
+include("process/functions.php");
 
 if(isset($_POST["send_link"])){
 	
@@ -34,37 +34,34 @@ WHERE email = '$email'";
 				<title>Reset Password</title>
 				</head>
 				<body>
-				To reset your password please click on the link below:<br>
+				To reset your password please click on the link below and use this code <strong>  $token</strong><br>
 					<em>Please note that this password reset link will expire in the next 5mins</em><br>
 				
-				<a href='http://teamhorme.diaticine.com/reset_password.php?email=$email&token=$token'>http://teamhorme.diaticine.com/forget-password.php?email=$email&token=$token</a><br>
+				<a href='http://hngteamhorme.diaticine.com/createpassword.php'>http://hngteamhorme.diaticine.com/createpassword.php</a><br>
 				
 			
 				<p>Regards,</p>
 				<strong>Darellwest</strong><br>
 				<strong><em>From Team Horme</em></strong>
-
 				</body>
 				</html>
 				";
 
-			// set content-type when sending HTML email
+			// content-type when sending HTML email
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 			// More headers
-			$headers .= 'From: <darell@teamhorme.diaticine.com>' . "\r\n";
+			$headers .= 'From: <darell@hngteamhorme.diaticine.com>' . "\r\n";
 			$headers .= 'Cc: ewere.njoagwu@gmail.com' . "\r\n";
 
 			if(mail($to,$subject,$message,$headers)){
 				
-				$success = "Please check your email for the password reset link";
+			$success = "Please check your email for the password reset code and link";
 				
 			}else{
 				$success = "There is a problem sending you email";
 			}
-			
-			
 		}
 		
 		

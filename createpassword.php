@@ -1,4 +1,11 @@
-<!DOCTYPE <!DOCTYPE html>
+<?php
+include("process/connection.php");
+
+include("process/reset_password_process.php");
+ ?>
+
+
+<!DOCTYPE html>
 	<html>
 	<head>
 	<meta charset="utf-8" />
@@ -102,23 +109,28 @@
 </head>
 	<body>    
 	<div class="container">
-        <!--Form Container-->
-            <form action=" " method="post">
-                    <!--Title-->
-                    <span class="modal-title">Create Password</span>
+        <!--Form Container--> 
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
+                    <span class="modal-title">Create Password</span>
+                    
                     <div class="form_container input-field1">
-                        <input type="password" class="form-control input_pass1" value="" minlength="5" placeholder="New Password *" required="required">
+                        <small style="color: red;"><?php echo $failure; ?></small>
+                        <small style="color: red;"><?php echo $token_code_error; ?></small>
+                        <small style="color: green;"><?php echo $success; ?></small>
+                        <small style="color: red;"><?php echo $token_has_expired; ?></small>
+                        <input type="text" name="tokencode" class="form-control input_pass1"  placeholder="Enter password reset code *" style="color: white;">
                     </div>
                     <div class="form_container input-field2">
-                        <input type="password" class="form-control input_pass2" value="" minlength="5" placeholder="Confirm Password *" required="required">
+                        <small style="color: red;"><?php echo $new_password_error; ?></small>
+                        <input type="password" name="newpassword" class="form-control input_pass2"  placeholder="Enter new password *" style="color: white;">
                     </div>
                     <div class="send_button">
-                    <button type="button" name="button" class="btn btn-block btn-lg">Create New Password</button>
+                    <button type="submit" name="resetnow" class="btn btn-block btn-lg">Create New Password</button>
                     </div> <br>
             
                     
-                    <div class="text-center small footer">Not yet Registered? <a href="#" class="bottom_signup"> Sign up</a></div>
+                    <div class="text-center small footer">Not yet Registered? <a href="index.php" class="bottom_signup"> Sign up/ Sign in</a></div>
 </form>
 	</div>
 	</body>

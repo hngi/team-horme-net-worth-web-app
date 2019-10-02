@@ -2,7 +2,7 @@ document.getElementById("signUpLink").addEventListener("click", view);
 document.getElementById("signInLink").addEventListener("click", view1);
 
 function view(e) {
-    if ((document.getElementById("signUp").style.display = "block")) {
+    if(document.getElementById("signUp").style.display = "block"){
         document.getElementById("signUpLink").classList.remove("bg-secondary");
         document.getElementById("signUpLink").classList.add("bg");
         document.getElementById("signInLink").classList.remove("bg");
@@ -22,12 +22,3 @@ function view1(e) {
     document.getElementById("signUpLink").classList.remove("bg");
     e.preventDefault();
 }
-
-document.getElementById("sign-in").addEventListener("click", function(e) {
-    e.preventDefault();
-    window.location.href = "./calc.html";
-});
-document.getElementById("sign-up").addEventListener("click", function(e) {
-    e.preventDefault();
-    window.location.href = "./calc.html";
-});
