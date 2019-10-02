@@ -1,9 +1,17 @@
 <?php
+include("process/connection.php");
 include("process/login_process.php");
 
 include("process/signup_process.php");
 
+
+
 ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html >
     <head>
@@ -27,9 +35,9 @@ include("process/signup_process.php");
         >
             <span>
                 <img
-                    src="https://res.cloudinary.com/izik4004/image/upload/v1569344486/Group.png"
+                    src="https://res.cloudinary.com/izik4004/image/upload/v1569624977/Group_2_1.png"
                     alt="logo"
-                    style="width: 90px; height: 30px"
+                    style="width: 110px; height: 40px"
                     id="logo-img"
                 />
             </span>
@@ -97,7 +105,6 @@ include("process/signup_process.php");
                             <h5 class="text-light h5 mt-4">Sign up for free</h5>
                             <div class="row">
                                 <div class="col">
-                                <div role="alert"></div>
                                    <small style="color:red; font-size:12px"> <?php echo $first_name_error; ?></small>
 								   <br><small style="color:red; font-size:12px"> <?php echo $last_name_error; ?></small>
                                     <div class="row">
@@ -108,7 +115,7 @@ include("process/signup_process.php");
                                                 id="firstName"
                                                 placeholder="First name"
                                                 class="p-2 form-control form-control-lg color col-sm-12 col-md-12 mt-3"
-                                                style="background-color: transparent"
+                                                style="background-color: transparent; color: white;"
                                             />
                                         </div>
                                         <div class="form-inline col-md-6 mt-3">
@@ -118,7 +125,7 @@ include("process/signup_process.php");
                                                 id="secondName"
                                                 placeholder="Last name"
                                                 class="p-2 form-control form-control-lg color ml-md-auto mt-md-0 col-sm-12 col-md-12 "
-                                                style="background-color: transparent"
+                                                style="background-color: transparent; color: white;"
                                             />
                                         </div>
                                     </div>
@@ -128,34 +135,34 @@ include("process/signup_process.php");
                                         <input
                                             type="text"
                                             name="email"
-                                            id="email"
+                                            id="password1"
                                             placeholder="Email"
                                             class="p-2 form-control form-control-lg color"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
                                     
                                     <div class="form-group m-1 mt-3">
                                        <small style="color:red; font-size:12px"> <?php echo $password_error; ?></small>
                                         <input
-                                            type="text"
+                                            type="password"
                                             name="password"
                                             id="password1"
                                             placeholder="Password"
                                             class="p-2 form-control form-control-lg color"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
                                     
                                     <div class="form-group m-1 mt-3">
 									<small style="color:red; font-size:12px"> <?php echo $confirm_password_error; ?></small>
                                         <input
-                                            type="text"
+                                            type="password"
                                             name="confirmpassword"
                                             id="password1"
                                             placeholder="Confirm password"
                                             class="p-2 form-control form-control-lg color"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
 
@@ -168,8 +175,16 @@ include("process/signup_process.php");
                                             style="background-color: rgb(38, 155, 120)"
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
+
+                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span> 
+                                        
                                     </div>
+                                    <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
+                                    <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
+                                    <p style="color:white; margin:0; padding:0">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
+
                                 </div>
+
                             </div>
                         </form>
                         <form
@@ -183,7 +198,6 @@ include("process/signup_process.php");
                             <h5 class="text-light h5 mt-3">Welcome Back!</h5>
                             <div class="row">
                                 <div class="col">
-                                <div role="alert"></div>
                                    <small style="color:red; font-size:12px"><?php echo $form_email_error; ?></small>
                                     <div class="form-group">
                                         <input
@@ -192,7 +206,7 @@ include("process/signup_process.php");
                                             id="Username"
                                             placeholder="Email"
                                             class=" form-control form-control-lg color mt-3 col-sm-12"
-                                            style="background-color: transparent;"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
                                     <small style="color:red; font-size:12px"><?php echo $form_password_error; ?></small>
@@ -203,7 +217,7 @@ include("process/signup_process.php");
                                             id="password1"
                                             placeholder="Password"
                                             class="p-2 form-control form-control-lg color col-sm-12"
-                                            style="background-color: transparent"
+                                            style="background-color: transparent; color: white;"
                                         />
                                     </div>
 
@@ -216,7 +230,7 @@ include("process/signup_process.php");
                                             style="background-color: rgb(38, 155, 120)"
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
-                                        <a href="#" class="text-light"
+                                        <a href="reset.php" class="text-light"
                                             ><p>Forgot password?</p></a
                                         >
                                     </div>
@@ -230,6 +244,5 @@ include("process/signup_process.php");
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="./app.js"></script>
-        <script src="./validate.js"></script>
     </body>
 </html>

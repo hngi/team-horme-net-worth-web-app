@@ -1,12 +1,18 @@
-<!DOCTYPE <!DOCTYPE html>
+<?php
+include("process/connection.php");
+include("process/forgot_password_process.php");
+?>
+
+
+
+<!DOCTYPE html>
 	<html>
 	<head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Create Password page</title>
+	<title>Reset Password page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="./images/netbar.jpg" type="image/x-icon">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <br>
@@ -56,9 +62,23 @@
         line-height: 22px;
         display: flex;
         align-items: center;
-        margin: 12 80px 0px;
+        margin: 0 90px 0px;
         letter-spacing: 0.02em;
     }
+        .container .modal-title2 {
+        margin-bottom: 10px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 22px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 12px 65px 0px;
+        letter-spacing: 0.1em;
+        }
         .container .form_container {
         margin-bottom: 20px;
         }
@@ -104,22 +124,23 @@
 	<body>    
 	<div class="container">
         <!--Form Container-->
-            <form action=" " method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> " method="post">
                     <!--Title-->
-                    <span class="modal-title">Create Password</span>
+                    <span class="modal-title">Reset Your Password</span>
+                    <span class="modal-title2">Request a password reset code</span>
 
                     <div class="form_container input-field1">
-                        <input type="password" class="form-control input_pass1" value="" minlength="5" placeholder="New Password *" required="required">
+                        <span style="color:red; font-size: 12px;"><?php echo $send_reset_link_error;?></span>
+                        <span style="color:green; font-size: 12px;"><?php echo $success;?></span>
+                        <input type="text" name="sendemail" class="form-control input_user" value="" placeholder="Email Address *" style="color:white;">
                     </div>
-                    <div class="form_container input-field2">
-                        <input type="password" class="form-control input_pass2" value="" minlength="5" placeholder="Confirm Password *" required="required">
-                    </div>
+
                     <div class="send_button">
-                    <button type="button" name="button" class="btn btn-block btn-lg">Create New Password</button>
+                    <button type="submit" name="send_link" class="btn btn-block btn-lg">Send Code</button>
                     </div> <br>
             
                     
-                    <div class="text-center small footer">Not yet Registered? <a href="#" class="bottom_signup"> Sign up</a></div>
+                    <div class="text-center small footer">Not yet Registered? <a href="index.php" class="bottom_signup"> <a href="index.php">Sign in/Sign up</a></div>
 </form>
 	</div>
 	</body>

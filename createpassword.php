@@ -1,12 +1,18 @@
-<!DOCTYPE <!DOCTYPE html>
+<?php
+include("process/connection.php");
+
+include("process/reset_password_process.php");
+ ?>
+
+
+<!DOCTYPE html>
 	<html>
 	<head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Reset Password page</title>
+	<title>Create Password page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="./images/netbar.jpg" type="image/x-icon">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <br>
@@ -56,23 +62,9 @@
         line-height: 22px;
         display: flex;
         align-items: center;
-        margin: 0 90px 0px;
+        margin: 12 80px 0px;
         letter-spacing: 0.02em;
     }
-        .container .modal-title2 {
-        margin-bottom: 10px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 22px;
-        color: #FFFFFF;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: 12px 65px 0px;
-        letter-spacing: 0.1em;
-        }
         .container .form_container {
         margin-bottom: 20px;
         }
@@ -117,22 +109,28 @@
 </head>
 	<body>    
 	<div class="container">
-        <!--Form Container-->
-            <form action=" " method="post">
-                    <!--Title-->
-                    <span class="modal-title">Reset Your Password</span>
-                    <span class="modal-title2">Request an email reset link</span>
+        <!--Form Container--> 
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
+                    <span class="modal-title">Create Password</span>
+                    
                     <div class="form_container input-field1">
-                        <input type="text" class="form-control input_user" value="" placeholder="Email Address *" required="required">
+                        <small style="color: red;"><?php echo $failure; ?></small>
+                        <small style="color: red;"><?php echo $token_code_error; ?></small>
+                        <small style="color: green;"><?php echo $success; ?></small>
+                        <small style="color: red;"><?php echo $token_has_expired; ?></small>
+                        <input type="text" name="tokencode" class="form-control input_pass1"  placeholder="Enter password reset code *" style="color: white;">
                     </div>
-
+                    <div class="form_container input-field2">
+                        <small style="color: red;"><?php echo $new_password_error; ?></small>
+                        <input type="password" name="newpassword" class="form-control input_pass2"  placeholder="Enter new password *" style="color: white;">
+                    </div>
                     <div class="send_button">
-                    <button type="button" name="button" class="btn btn-block btn-lg">Send Link</button>
+                    <button type="submit" name="resetnow" class="btn btn-block btn-lg">Create New Password</button>
                     </div> <br>
             
                     
-                    <div class="text-center small footer">Not yet Registered? <a href="#" class="bottom_signup"> Sign up</a></div>
+                    <div class="text-center small footer">Not yet Registered? <a href="index.php" class="bottom_signup"> Sign up/ Sign in</a></div>
 </form>
 	</div>
 	</body>
