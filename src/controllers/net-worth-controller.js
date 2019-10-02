@@ -27,7 +27,7 @@ const NetWorth = {
         const 
         const { asset } = req.body;
         const {monetoty_value} = req.body;
-      const lastId = assets[assets.id - 1].id;
+      const lastId = assets[assets.id - 1];
 
 
     assets.push({
