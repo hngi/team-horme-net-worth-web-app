@@ -2,8 +2,6 @@ var assetForm = document.querySelector("#asset-form");
 var liabilityForm = document.querySelector("#liability-form");
 var totalAsset = document.getElementById("total-asset");
 var totalLiability = document.getElementById("total-liability");
-const deleteLiability = document.getElementById("deleteLiability");
-const deleteAsset = document.getElementById("deleteAsset");
 
 //prevent form submission
 assetForm.onsubmit = function(e) {
@@ -62,20 +60,7 @@ function newAssetField() {
     assetForm.firstElementChild.appendChild(asset);
     assetForm.firstElementChild.appendChild(assetValue);
 }
-//delete asset input
-const deleteAssetInput = e => {
-    var assetForm = document.querySelector("#asset-form");
-    let formLength = assetForm.firstElementChild.children.length / 2;
 
-    let asset = `asset${formLength - 1}`;
-    let assetValue = `asset-value${formLength - 1}`;
-    console.log(asset);
-
-    document.getElementById(asset).parentElement.parentElement.remove();
-    document.getElementById(assetValue).parentElement.parentElement.remove();
-    e.preventDefault();
-};
-deleteAsset.addEventListener("click", deleteAssetInput);
 
 //function to add a liability
 function newLiabilityField() {
@@ -115,20 +100,7 @@ function newLiabilityField() {
     liabilityForm.firstElementChild.appendChild(liability);
     liabilityForm.firstElementChild.appendChild(liabilityValue);
 }
-//delete liability input
-const deleteLiabilityInput = e => {
-    var liabilityForm = document.querySelector("#liability-form");
-    var formLength = liabilityForm.firstElementChild.children.length / 2;
 
-    let liability = `liability${formLength - 1}`;
-    let liabilityValue = `liability-value${formLength - 1}`;
-
-    document.getElementById(liability).parentElement.parentElement.remove();
-    document.getElementById(liabilityValue).parentElement.parentElement.remove();
-    e.preventDefault();
-};
-
-deleteLiability.addEventListener("click", deleteLiabilityInput);
 
 //Update values of total asset, total liability, and net worth on form change
 function updateTotalAsset() {
