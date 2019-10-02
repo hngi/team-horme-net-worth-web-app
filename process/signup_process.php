@@ -19,6 +19,11 @@ if(isset($_POST["sign_up"])){
 		$password_check = validateFormData($_POST["password"]);
 		$confirm_password_check = validateFormData($_POST["confirmpassword"]);
 		
+		if(isset($_POST["check"]) && $_POST["check"] !==""){
+			$checked = validateFormData($_POST["check"]);
+		}else{
+			$unchecked = "Check the box to agree to our terms to use this app";
+		}
 	
 		//checking the firstname format
 		if(!preg_match("/^[A-Za-z]+$/", $first_name_check) && $first_name_check){
@@ -105,7 +110,7 @@ if(isset($_POST["sign_up"])){
 	}
 	
 	
-		if($password_check === $confirm_password_check && $email && $first_name && last_name && mysqli_num_rows($result2) < 1 && !$last_name_error && !$first_name_error && !$password_error){
+		if($checked && $password_check === $confirm_password_check && $email && $first_name && last_name && mysqli_num_rows($result2) < 1 && !$last_name_error && !$first_name_error && !$password_error){
 		$query = "INSERT INTO signup (id, first_name, last_name, email, password, signup_date
 )
 		
