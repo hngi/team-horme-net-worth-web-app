@@ -85,3 +85,7 @@ img {
 .dropdown-menu {
     min-width: 2rem !important;
 }
+.delete {
+    height: 20px;
+    width: 20px;
+}
