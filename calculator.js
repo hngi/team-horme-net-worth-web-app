@@ -73,6 +73,7 @@ const deleteAssetInput = e => {
 
     document.getElementById(asset).parentElement.parentElement.remove();
     document.getElementById(assetValue).parentElement.parentElement.remove();
+    updateTotalAsset();
     e.preventDefault();
 };
 deleteAsset.addEventListener("click", deleteAssetInput);
@@ -124,7 +125,11 @@ const deleteLiabilityInput = e => {
     let liabilityValue = `liability-value${formLength - 1}`;
 
     document.getElementById(liability).parentElement.parentElement.remove();
-    document.getElementById(liabilityValue).parentElement.parentElement.remove();
+    document
+        .getElementById(liabilityValue)
+        .parentElement.parentElement.remove();
+    updateTotalLiability();
+
     e.preventDefault();
 };
 
