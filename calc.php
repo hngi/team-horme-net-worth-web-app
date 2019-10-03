@@ -127,6 +127,7 @@ if(!$_SESSION['calcuser']){
                                                     />
 
                                                     <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newAssetField()">Calculate / Add an Asset</div>
+                                                    <div class="btn p-2 btn-danger" id="deleteAsset" style="box-shadow: -1px 1px 2px black"><img class="delete" src="icons/trash.svg" width="25px" height="25px"/></div>
 
                                                     <div class="row d-flex mt-3 justify-content-center">
                                                         <div class="p-3 btn-primary"  style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Total Asset: <span id="sign">&#8358</span> <span id="total-asset"></span></div>
@@ -188,6 +189,7 @@ if(!$_SESSION['calcuser']){
 
 
                                                         <div class="btn p-2 btn-primary" style="background-color: rgb(38, 155, 120); box-shadow: -1px 1px 2px black" onclick="newLiabilityField()">Calculate / Add a Liability</div>
+                                                        <div  class="btn p-2 btn-danger" id="deleteLiability" style="box-shadow: -1px 1px 2px black" > <img src="icons/trash.svg" class="delete"/></div>
 
                                                         <div class="row d-flex mt-3 justify-content-center">
                                                             <div class="p-3 btn-primary"  style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Total Liability: <span id="sign1">&#8358</span><span id="total-liability"></span></div>

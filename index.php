@@ -178,8 +178,16 @@ include("process/signup_process.php");
                                             style="background-color: rgb(38, 155, 120)"
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
+
+                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span> 
+                                        
                                     </div>
+                                    <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
+                                    <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
+                                    <p style="color:white; margin:0; padding:0">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
+
                                 </div>
+
                             </div>
                         </form>
                         <form
