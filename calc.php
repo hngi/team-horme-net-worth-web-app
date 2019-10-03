@@ -69,6 +69,7 @@ if(!$_SESSION['calcuser']){
                       </div>
                     </li>
                   </ul>
+                  <a class="text-light font-weight-bold link" href="dashboard.php">Dashboard</a>
                   <a class="text-light font-weight-bold" href="logout.php">Sign out</a>
           </nav>
         <div class="container-fluid" style="background-color: rgb(65, 89, 94)">
