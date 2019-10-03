@@ -27,6 +27,8 @@ if(!$_SESSION['calcuser']){
         crossorigin="anonymous"
       />
         <link rel="stylesheet" href="main.css" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./images/netbar.jpg" type="image/x-icon">
     </head>
     <body>
         <!-- Sign-in page -->
