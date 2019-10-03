@@ -197,6 +197,7 @@ if(!$_SESSION['calcuser']){
                                                     <div class="form-group col-9 col-md-3 mb-5 mt-3 m-auto">
                                                         
                                                     <a href="#" class="btn pr-3 p-md-3 p-sm-2 pl-0 text-light text-center mb-5 col-12 mt-4" style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Your total net worth: <span id="sign2">&#8358</span><span id="net-worth"></span></a>
+                                                    <button href="#" class="btn pr-3 p-md-3 p-sm-2 pl-0 text-light text-center mb-5 col-12 mt-4" style="background-color:rgb(38, 155, 120); box-shadow: -1px 1px 2px black">Save </button>>
                                                     </div>
                                                 </form>
                             </div>
