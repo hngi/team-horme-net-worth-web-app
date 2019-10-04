@@ -10,6 +10,15 @@ input[placeholder] {
 .button {
     border-radius: 10px;
 }
+
+.part{
+    width:50%;
+    border-radius: 10px;
+}
+.lgin{
+    display:none;
+    cursor: pointer;
+}
 .transparent {
     background-color: transparent !important;
     border-radius: 10px;
