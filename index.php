@@ -13,7 +13,7 @@ include("process/signup_process.php");
 
 
 <!DOCTYPE html>
-<html >
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,6 +41,7 @@ include("process/signup_process.php");
                     id="logo-img"
                 />
             </span>
+            <a href="faq.html" class="text-light font-weight-bold">FAQ</a>
         </nav>
         <div class="container-fluid">
             <div
@@ -79,11 +80,11 @@ include("process/signup_process.php");
                     >
                 </div>
                 <div
-                    class="row  p-5 align-self-center m-auto bor col-md-5 mb-5"
+                    class="row  pt-3 pb-1 align-self-center m-auto bor col-md-5 mb-5"
                     style="min-height: 50vh;background-color: rgb(14, 34, 56);box-shadow:  -10px  5px 10px gray;"
                 >
                     <div
-                        class=" align-self-center text-center pb-5 col-md-12"
+                        class=" align-self-center text-center pb- col-md-12"
                         id="page1"
                     >
                         <div class="row">
@@ -102,7 +103,7 @@ include("process/signup_process.php");
                         </div>
 
                         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="signUp" method="post">
-                            <h5 class="text-light h5 mt-4">Sign up for free</h5>
+                            <h5 class="text-light h5 mt-1">Sign up for free</h5>
                             <div class="row">
                                 <div class="col">
                                    <small style="color:red; font-size:12px"> <?php echo $first_name_error; ?></small>
@@ -177,11 +178,11 @@ include("process/signup_process.php");
                                         />
 
                                        <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span> 
+                                       <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
+                                       <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
+                                       <p style="color:white; margin:0; padding:0">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
                                         
                                     </div>
-                                    <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
-                                    <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
-                                    <p style="color:white; margin:0; padding:0">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
 
                                 </div>
 
