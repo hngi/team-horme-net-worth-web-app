@@ -1,11 +1,11 @@
 
 <?php
-	$server		 = 'salt.db.elephantsql.com';
-	$user		 = 'kglcuwyc';
-	$password	 = 'JjkyrTvl_vUwDAAgrNlhAPLH8XDgm2M-';
-	$database	 = 'kglcuwyc';
+	$host    	 = 'localhost';
+	$user		 = 'root';
+	$password	 = 'root';
+	$db			 = 'networth';
 
-	$conn		 = mysqli_connect($server, $user, $password, $database);
+	$conn		 = mysqli_connect($host, $user, $password, $db);
 
 	if(!$conn){
 		die("connection to this database failed: " .mysqli_connect_error());
