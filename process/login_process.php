@@ -1,4 +1,5 @@
 <?php 
+require("process/connection.php");
 
 if(isset($_POST["loginapp"])){
 	
@@ -28,15 +29,18 @@ if(isset($_POST["loginapp"])){
 		if(password_verify($login_password, $hashed_password)){
 			session_start();
 			$_SESSION['calcuser'] = $user;
-			header('Location: calc.php');
+			echo 'LOG_IN';
+			//header('Location: calc.php');
 		}else{
 
-			$form_password_error = "wrong password";
+			$form_password_error = "Wrong Password";
+			echo $form_password_error;
 		}
 		
 	}else{
 				
-		$form_email_error = "wrong email";
+		$form_email_error = "Wrong Email";
+		echo $form_email_error;
 	}
 	
 			

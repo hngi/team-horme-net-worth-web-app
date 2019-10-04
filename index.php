@@ -1,16 +1,9 @@
-<?php
-include("process/connection.php");
-include("process/login_process.php");
-
-include("process/signup_process.php");
-
-
-
+<?php 
+session_start();
+if(isset($_SESSION["calcuser"])){
+header("Location: calc.php");
+}
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html >
@@ -101,12 +94,11 @@ include("process/signup_process.php");
                             >
                         </div>
 
-                        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="signUp" method="post">
+                        <form action="/process/signup_process.php" id="signUp" method="post">
                             <h5 class="text-light h5 mt-4">Sign up for free</h5>
+                            <div class = "alert-msg"></div>
                             <div class="row">
                                 <div class="col">
-                                   <small style="color:red; font-size:12px"> <?php echo $first_name_error; ?></small>
-								   <br><small style="color:red; font-size:12px"> <?php echo $last_name_error; ?></small>
                                     <div class="row">
                                         <div class="form-inline col-md-6">
                                             <input
@@ -116,6 +108,7 @@ include("process/signup_process.php");
                                                 placeholder="First name"
                                                 class="p-2 form-control form-control-lg color col-sm-12 col-md-12 mt-3"
                                                 style="background-color: transparent; color: white;"
+                                                required
                                             />
                                         </div>
                                         <div class="form-inline col-md-6 mt-3">
@@ -126,24 +119,25 @@ include("process/signup_process.php");
                                                 placeholder="Last name"
                                                 class="p-2 form-control form-control-lg color ml-md-auto mt-md-0 col-sm-12 col-md-12 "
                                                 style="background-color: transparent; color: white;"
+                                                required
                                             />
                                         </div>
                                     </div>
 									
                                     <div class="form-group m-1 mt-3">
-                                     <small style="color:red; font-size:12px"> <?php echo $email_error; ?></small>
                                         <input
-                                            type="text"
+                                            type="email"
                                             name="email"
-                                            id="password1"
+                                            id="email"
                                             placeholder="Email"
                                             class="p-2 form-control form-control-lg color"
                                             style="background-color: transparent; color: white;"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                                            required
                                         />
                                     </div>
                                     
                                     <div class="form-group m-1 mt-3">
-                                       <small style="color:red; font-size:12px"> <?php echo $password_error; ?></small>
                                         <input
                                             type="password"
                                             name="password"
@@ -151,11 +145,12 @@ include("process/signup_process.php");
                                             placeholder="Password"
                                             class="p-2 form-control form-control-lg color"
                                             style="background-color: transparent; color: white;"
+                                            minlength = "6"
+                                            required
                                         />
                                     </div>
                                     
                                     <div class="form-group m-1 mt-3">
-									<small style="color:red; font-size:12px"> <?php echo $confirm_password_error; ?></small>
                                         <input
                                             type="password"
                                             name="confirmpassword"
@@ -163,6 +158,7 @@ include("process/signup_process.php");
                                             placeholder="Confirm password"
                                             class="p-2 form-control form-control-lg color"
                                             style="background-color: transparent; color: white;"
+                                            required
                                         />
                                     </div>
 
@@ -176,10 +172,9 @@ include("process/signup_process.php");
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
 
-                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span> 
+                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;" required> I read and agree to your terms and conditions</span> 
                                         
                                     </div>
-                                    <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
                                     <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
                                     <p style="color:white; margin:0; padding:0">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
 
@@ -188,7 +183,7 @@ include("process/signup_process.php");
                             </div>
                         </form>
                         <form
-							action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+							action="/process/login_process.php"
                             id="signIn"
                             style="display: none;"
                             class=""
@@ -196,9 +191,9 @@ include("process/signup_process.php");
                             method="post"
                         >
                             <h5 class="text-light h5 mt-3">Welcome Back!</h5>
+                            <div class = "alert-msg"></div>
                             <div class="row">
                                 <div class="col">
-                                   <small style="color:red; font-size:12px"><?php echo $form_email_error; ?></small>
                                     <div class="form-group">
                                         <input
                                             type="text"
@@ -209,7 +204,6 @@ include("process/signup_process.php");
                                             style="background-color: transparent; color: white;"
                                         />
                                     </div>
-                                    <small style="color:red; font-size:12px"><?php echo $form_password_error; ?></small>
                                     <div class="form-group mt-3">
                                         <input
                                             type="password"
@@ -244,5 +238,6 @@ include("process/signup_process.php");
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="./app.js"></script>
+        <script src="./ajax.js"></script>
     </body>
 </html>
