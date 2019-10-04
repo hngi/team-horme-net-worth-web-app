@@ -14,7 +14,7 @@
 
  $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-echo "$url";
+echo $url;
 
   $server = $url["host"];
   $username = $url["user"];
