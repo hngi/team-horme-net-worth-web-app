@@ -1,6 +1,6 @@
 
 <?php
-	$server		 = 'salt.db.elephantsql.com (salt-01)';
+	$server		 = 'salt.db.elephantsql.com';
 	$user		 = 'kglcuwyc';
 	$password	 = 'JjkyrTvl_vUwDAAgrNlhAPLH8XDgm2M-';
 	$database	 = 'kglcuwyc';
