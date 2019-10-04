@@ -21,5 +21,4 @@
 
   mysqli_connect($server, $username, $password, $db);
 
-  mysql_select_db($db);
 ?>
