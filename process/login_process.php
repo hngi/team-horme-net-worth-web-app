@@ -1,5 +1,5 @@
 <?php 
-require("./process/connection.php");
+require("/process/connection.php");
 
 if(isset($_POST["loginapp"])){
 	
