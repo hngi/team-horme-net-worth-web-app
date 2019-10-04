@@ -1,9 +1,9 @@
 
 <?php
-	$server		 = 'dumbo.db.elephantsql.com (dumbo-01)';
-	$user		 = 'wfhmuqso';
-	$password	 = 'sLorwsG5twKIkDkH3hu8qpYzD2iP18c8';
-	$database	 = 'wfhmuqso';
+	$server		 = 'salt.db.elephantsql.com (salt-01)';
+	$user		 = 'kglcuwyc';
+	$password	 = 'JjkyrTvl_vUwDAAgrNlhAPLH8XDgm2M-';
+	$database	 = 'kglcuwyc';
 
 	$conn		 = mysqli_connect($server, $user, $password, $database);
 
