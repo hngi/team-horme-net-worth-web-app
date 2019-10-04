@@ -1,32 +1,32 @@
 <?php
-	//$server		 = 'localhost';
-	//$user		 = 'root';
-	//$password	 = 'root';
-	//$db			 = 'networth';
+	$server		 = 'localhost';
+	$user		 = 'root';
+	$password	 = 'root';
+	$db			 = 'networth';
 
-	//$conn		 = mysqli_connect($server, $user, $password, $db);
+	$conn		 = mysqli_connect($server, $user, $password, $db);
 
-	//if(!$conn){
-		//die("connection to this database failed: " .mysqli_connect_error());
-	//}
+	if(!$conn){
+		die("connection to this database failed: " .mysqli_connect_error());
+	}
 
 	//echo "we connected successfully";
 
- $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+ //$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 
 
-  $server = $url["host"];
-  $username = $url["user"];
-  $password = $url["pass"];
-  $db = substr($url["path"],1);
+  //$server = $url["host"];
+  //$username = $url["user"];
+  //$password = $url["pass"];
+  //$db = substr($url["path"],1);
 
  
-$conn = mysqli_connect($server, $username, $password, $db);
+//$conn = mysqli_connect($server, $username, $password, $db);
 
-if(!$conn){
-		die("connection to this database failed: " .mysqli_connect_error());
-	}
+//if(!$conn){
+		//die("connection to this database failed: " .mysqli_connect_error());
+	//}
 
 	//echo "we connected successfully";
 
