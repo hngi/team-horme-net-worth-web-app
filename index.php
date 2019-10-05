@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 <?php 
 session_start();
 if(isset($_SESSION["calcuser"])){
 header("Location: calc.php");
 }
-=======
-<?php
-include("process/connection.php");
-include("process/login_process.php");
-
-include("process/signup_process.php");
-
 include("process/contact_process.php");
 
 
->>>>>>> 30678b228d39c161153696e67d7a8db14723d0dd
 ?>
 
 <!DOCTYPE html>
@@ -224,14 +215,7 @@ include("process/contact_process.php");
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
 
-<<<<<<< HEAD
                                        <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;" required> I read and agree to your terms and conditions</span> 
-=======
-                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span><br>
-                                       <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
-                                       <h6 style="color: white; margin-top: -8px;"> TERMS AND CONDITIONS</h6>
-                                       <p style="color:white; margin-bottom:12px; margin-top:-15px; padding:10px">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
->>>>>>> 30678b228d39c161153696e67d7a8db14723d0dd
                                         
                                     </div>
                                     <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
@@ -358,14 +342,10 @@ include("process/contact_process.php");
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
-        <script src="./app.js"></script>
         <script src="./ajax.js"></script>
-=======
         <script src="js/app.js"></script>
         <script src="js/contact.js"></script>
 
 
->>>>>>> 30678b228d39c161153696e67d7a8db14723d0dd
     </body>
 </html>
