@@ -1,65 +1,80 @@
-body{
+body {
     background-color: #E5E5E5 !important;
 }
-.body{
+
+.body {
     background-color: white !important;
-    
 }
-#collapsibleNavId{
+
+#collapsibleNavId {
     color: white !important;
 }
-.welcome{
+
+.welcome {
     background-color: #E5E5E5 !important;
-    
 }
-.nav{
+
+.nav {
     background-color: #2FC199 !important;
 }
-.nav-link{
+
+.nav-link {
     margin-left: -5% !important;
 }
-.name{
+
+.alert-msg {
+    display: none;
+}
+
+.name {
     color: rgb(255, 255, 255) !important;
 }
-.user{
+
+.user {
     color: rgb(255, 255, 255) !important;
     text-shadow: 0px 4px 4px #2FC199 !important;
-   
 }
-.id{
+
+.id {
     border-right: solid 1px white;
 }
-#signout{
+
+#signout {
     border-left: solid 1px white;
 }
-#user{
+
+#user {
     color: rgb(255, 255, 255) !important;
     text-shadow: 0px 4px 4px #2FC199 !important;
     font-size: 2.5em !important;
 }
-p{
-   margin-bottom: 8% !important;
+
+p {
+    margin-bottom: 8% !important;
     /* margin-left: 38% !important; */
 }
-.black-bg{
+
+.black-bg {
     background-color: black !important;
     padding: 3px;
 }
-.cont{
-    color: #2FC199 !important;
 
-   
+.cont {
+    color: #2FC199 !important;
 }
-#btn{
+
+#btn {
     background-color: #1AB188 !important;
     box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
-#net{
+
+#net {
     color: #000000 !important;
     font-size: 2em;
     /* margin-left: 36% !important; */
 }
-#display{
+
+#display {
     width: 30% !important;
     margin-left: 35% !important;
     background: #1AB188;
@@ -67,7 +82,8 @@ p{
     border-radius: 8px;
     color: #000000 !important;
 }
-.copyright{
+
+.copyright {
     padding: 10px;
     background-color: black !important;
     color: white;

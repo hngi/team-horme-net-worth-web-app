@@ -1,0 +1,53 @@
+/* navigation style heading */
+.nav-default {
+    background: rgb(38, 155, 120);
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    padding: 5px;
+}
+
+.navbar-logo {
+    /* padding: 15px 0; */
+    height: auto;
+    font-size: 20px;
+    text-transform: capitalize;
+    
+}
+.nav-list>li a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 17px;
+    color: #fff !important;
+    text-transform: capitalize;
+    border: 1px solid #fff;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.nav-list>li a:hover {
+    background: #fff;
+    color: green !important;
+}
+@media only screen and (max-width: 550px) {
+    .nav-list{
+        width: 100%;
+        margin: auto
+    }
+}
+/* footer section start here */
+.footer-section {
+    background: rgb(38, 155, 120);
+}
+
+.my-list a,
+.footer-copyright a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer-copyright a:hover {
+    text-decoration: underline;
+    
+}

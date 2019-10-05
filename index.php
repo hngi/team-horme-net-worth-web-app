@@ -1,19 +1,15 @@
-<?php
-include("process/connection.php");
-include("process/login_process.php");
-
-include("process/signup_process.php");
-
+<?php 
+session_start();
+if(isset($_SESSION["calcuser"])){
+header("Location: calc.php");
+}
+include("process/contact_process.php");
 
 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
-<html >
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,8 +22,36 @@ include("process/signup_process.php");
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="main.css" />
-        <!-- favicon -->
+
         <link rel="shortcut icon" href="./images/netbar.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="contact.css" />
+        <link rel="stylesheet" href="style.css" />
+
+        
+        
+        
+        
+        <!--Styling for the cookie modal-->
+        <style>
+            .cookies-popup{
+                margin: 20px;
+                background: rgb(9, 80, 58); 
+            }
+            .modal-header{
+                background: rgb(137, 247, 212); 
+            }
+            .modal-footer{
+                background: rgb(137, 247, 212); 
+                
+            }
+            .btn-primary{
+                background: #b3196e;
+                display: flex;
+                margin: 0px 180px 0px;
+                
+            }
+        </style>
+
     </head>
     <body>
         <!-- Sign-in page -->
@@ -43,8 +67,12 @@ include("process/signup_process.php");
                     id="logo-img"
                 />
             </span>
+            
+            <a href="Faq.html" class="text-light font-weight-bold">FAQ</a>
+            <a href="subscribe.php" class="text-light font-weight-bold align-left">Subscribe</a>
         </nav>
         <div class="container-fluid">
+			<div style="color: green;"><?php echo $messageSent; ?></div>
             <div
                 class="row pt-2 float-sm-left"
                 style="min-height: 100vh;"
@@ -81,11 +109,11 @@ include("process/signup_process.php");
                     >
                 </div>
                 <div
-                    class="row  p-5 align-self-center m-auto bor col-md-5 mb-5"
+                    class="row  pt-3 pb-1 align-self-center m-auto bor col-md-5 mb-5"
                     style="min-height: 50vh;background-color: rgb(14, 34, 56);box-shadow:  -10px  5px 10px gray;"
                 >
                     <div
-                        class=" align-self-center text-center pb-5 col-md-12"
+                        class=" align-self-center text-center pb- col-md-12"
                         id="page1"
                     >
                         <div class="row">
@@ -103,12 +131,11 @@ include("process/signup_process.php");
                             >
                         </div>
 
-                        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="signUp" method="post">
+                        <form action="/process/signup_process.php" id="signUp" method="post">
                             <h5 class="text-light h5 mt-4">Sign up for free</h5>
+                            <div class = "alert-msg"></div>
                             <div class="row">
                                 <div class="col">
-                                   <small style="color:red; font-size:12px"> <?php echo $first_name_error; ?></small>
-								   <br><small style="color:red; font-size:12px"> <?php echo $last_name_error; ?></small>
                                     <div class="row">
                                         <div class="form-inline col-md-6">
                                             <input
@@ -118,6 +145,7 @@ include("process/signup_process.php");
                                                 placeholder="First name"
                                                 class="p-2 form-control form-control-lg color col-sm-12 col-md-12 mt-3"
                                                 style="background-color: transparent; color: white;"
+                                                required
                                             />
                                         </div>
                                         <div class="form-inline col-md-6 mt-3">
@@ -128,24 +156,25 @@ include("process/signup_process.php");
                                                 placeholder="Last name"
                                                 class="p-2 form-control form-control-lg color ml-md-auto mt-md-0 col-sm-12 col-md-12 "
                                                 style="background-color: transparent; color: white;"
+                                                required
                                             />
                                         </div>
                                     </div>
 									
                                     <div class="form-group m-1 mt-3">
-                                     <small style="color:red; font-size:12px"> <?php echo $email_error; ?></small>
                                         <input
-                                            type="text"
+                                            type="email"
                                             name="email"
-                                            id="password1"
+                                            id="email"
                                             placeholder="Email"
                                             class="p-2 form-control form-control-lg color"
                                             style="background-color: transparent; color: white;"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                                            required
                                         />
                                     </div>
                                     
                                     <div class="form-group m-1 mt-3">
-                                       <small style="color:red; font-size:12px"> <?php echo $password_error; ?></small>
                                         <input
                                             type="password"
                                             name="password"
@@ -153,11 +182,12 @@ include("process/signup_process.php");
                                             placeholder="Password"
                                             class="p-2 form-control form-control-lg color"
                                             style="background-color: transparent; color: white;"
+                                            minlength = "6"
+                                            required
                                         />
                                     </div>
                                     
                                     <div class="form-group m-1 mt-3">
-									<small style="color:red; font-size:12px"> <?php echo $confirm_password_error; ?></small>
                                         <input
                                             type="password"
                                             name="confirmpassword"
@@ -165,6 +195,7 @@ include("process/signup_process.php");
                                             placeholder="Confirm password"
                                             class="p-2 form-control form-control-lg color"
                                             style="background-color: transparent; color: white;"
+                                            required
                                         />
                                     </div>
 
@@ -178,10 +209,9 @@ include("process/signup_process.php");
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
 
-                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span> 
+                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;" required> I read and agree to your terms and conditions</span> 
                                         
                                     </div>
-                                    <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
                                     <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
                                     <p style="color:white; margin:0; padding:0">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
 
@@ -190,7 +220,7 @@ include("process/signup_process.php");
                             </div>
                         </form>
                         <form
-							action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+							action="/process/login_process.php"
                             id="signIn"
                             style="display: none;"
                             class=""
@@ -198,9 +228,9 @@ include("process/signup_process.php");
                             method="post"
                         >
                             <h5 class="text-light h5 mt-3">Welcome Back!</h5>
+                            <div class = "alert-msg"></div>
                             <div class="row">
                                 <div class="col">
-                                   <small style="color:red; font-size:12px"><?php echo $form_email_error; ?></small>
                                     <div class="form-group">
                                         <input
                                             type="text"
@@ -211,7 +241,6 @@ include("process/signup_process.php");
                                             style="background-color: transparent; color: white;"
                                         />
                                     </div>
-                                    <small style="color:red; font-size:12px"><?php echo $form_password_error; ?></small>
                                     <div class="form-group mt-3">
                                         <input
                                             type="password"
@@ -243,8 +272,87 @@ include("process/signup_process.php");
                 </div>
             </div>
         </div>
+        
+        
+		<div id="contact-form-frame" class="contact-button hide-button">
+			<div class="container">  
+					<form name="contact-form"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" id="contact-form"  >
+					  <h3>Contact Us.</h3>
+					  <span id="close-btn">&times;</span>
+					  <fieldset>
+						<input type="text" id="name" name="name" required minlength="4" placeholder="Your Name">
+						
+					  </fieldset>
+					  <fieldset>
+						<input type="email" id="email" name="email" required placeholder="Your Email Here...">
+						
+					  </fieldset>
+					  <fieldset>
+						<input type="text" id="title" name="title" required autofocus placeholder="Title">
+						
+					  </fieldset>
+					 
+					  <fieldset>
+						<textarea id="message" minlength="20" name="message" required placeholder="Type your message here..."></textarea>
+					  </fieldset>
+					  <fieldset>
+						<button name="submitted" id="contact-submit">Submit</button>
+					  </fieldset>
+					</form>
+				  </div>
+				</div>
+			<div style="margin: 10px 0 0 80px; height: 60px; padding:3px;" class="contact-modal-open-btn">
+				<h2>Contact Us.</h2>
+			</div>
+      
+      
+      	  <!--Beginning of cookie notification modal-->
+<!--
+        <div class="cookies-popup">
+             Modal HTML 
+            <div id="myModal" class="modal fade" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <img
+                                src="https://res.cloudinary.com/izik4004/image/upload/v1569624977/Group_2_1.png"
+                                alt="logo"
+                                style="width: 110px; height: 40px"
+                                id="logo-img"
+                            />
+                            <h5 class="modal-title">Cookie Notice</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>The Networth calculator webiste employs cookies to improve your user experience. 
+                            For more information please read our <a href="cookies.html" class="cookies">cookie policy</a>. <br>
+                            By clicking the "I ACCEPT" button, you will be providing your consent to our use of cookies.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button  type="button" class="btn btn-primary" data-dismiss="modal">I Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="./app.js"></script>
+        <script src="./ajax.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/contact.js"></script>
+         <!--Javascript for the cookie modal notification set to remain static onclick outside-->
+         <script>
+            $(document).ready(function(){
+                $("#myModal").modal({
+                backdrop: 'static',
+                keyboard: false });
+                });
+        </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
     </body>
 </html>
