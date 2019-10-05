@@ -30,14 +30,6 @@ include("process/contact_process.php");
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         
         
-         <!--Javascript for the cookie modal notification set to remain static onclick outside-->
-        <script>
-            $(document).ready(function(){
-                $("#myModal").modal({
-                backdrop: 'static',
-                keyboard: false });
-                });
-        </script>
         <!--Styling for the cookie modal-->
         <style>
             .cookies-popup{
@@ -345,6 +337,14 @@ include("process/contact_process.php");
         <script src="./ajax.js"></script>
         <script src="js/app.js"></script>
         <script src="js/contact.js"></script>
+         <!--Javascript for the cookie modal notification set to remain static onclick outside-->
+         <script>
+            $(document).ready(function(){
+                $("#myModal").modal({
+                backdrop: 'static',
+                keyboard: false });
+                });
+        </script>
 
 
     </body>
