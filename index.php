@@ -28,6 +28,41 @@ include("process/contact_process.php");
         />
         <link rel="stylesheet" href="main.css" />
         <link rel="stylesheet" href="contact.css" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        
+        
+         <!--Javascript for the cookie modal notification set to remain static onclick outside-->
+        <script>
+            $(document).ready(function(){
+                $("#myModal").modal({
+                backdrop: 'static',
+                keyboard: false });
+                });
+        </script>
+        <!--Styling for the cookie modal-->
+        <style>
+            .cookies-popup{
+                margin: 20px;
+                background: rgb(9, 80, 58); 
+            }
+            .modal-header{
+                background: rgb(137, 247, 212); 
+            }
+            .modal-footer{
+                background: rgb(137, 247, 212); 
+                
+            }
+            .btn-primary{
+                background: #b3196e;
+                display: flex;
+                margin: 0px 180px 0px;
+                
+            }
+        </style>
     </head>
     <body>
         <!-- Sign-in page -->
@@ -43,7 +78,9 @@ include("process/contact_process.php");
                     id="logo-img"
                 />
             </span>
+            
             <a href="faq.html" class="text-light font-weight-bold">FAQ</a>
+            <a href="subscribe.php" class="text-light font-weight-bold align-left">Subscribe</a>
         </nav>
         <div class="container-fluid">
 			<div style="color: green;"><?php echo $messageSent; ?></div>
@@ -277,10 +314,41 @@ include("process/contact_process.php");
 			<div style="margin: 20px 0 0 100px;" class="contact-modal-open-btn">
 				<h2>Contact Us.</h2>
 			</div>
+      
+      
+      	  <!--Beginning of cookie notification modal-->
+        <div class="cookies-popup">
+            <!-- Modal HTML -->
+            <div id="myModal" class="modal fade" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <img
+                                src="https://res.cloudinary.com/izik4004/image/upload/v1569624977/Group_2_1.png"
+                                alt="logo"
+                                style="width: 110px; height: 40px"
+                                id="logo-img"
+                            />
+                            <h5 class="modal-title">Cookie Notice</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>The Networth calculator webiste employs cookies to improve your user experience. 
+                            For more information please read our <a href="cookies.html" class="cookies">cookie policy</a>. <br>
+                            By clicking the "I ACCEPT" button, you will be providing your consent to our use of cookies.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button  type="button" class="btn btn-primary" data-dismiss="modal">I Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="./app.js"></script>
-        <script src="contact.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/contact.js"></script>
+
+
     </body>
 </html>

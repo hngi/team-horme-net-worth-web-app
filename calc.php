@@ -205,9 +205,9 @@ if(!$_SESSION['calcuser']){
             </div>
         </div>
         
-        <script src="./calculator.js"></script>
+        <script src="js/calculator.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="./calc.js"></script>
+        <script src="js/calc.js"></script>
     </body>
 </html>
