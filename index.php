@@ -41,7 +41,9 @@ include("process/signup_process.php");
                     id="logo-img"
                 />
             </span>
+            
             <a href="faq.html" class="text-light font-weight-bold">FAQ</a>
+            <a href="subscribe.php" class="text-light font-weight-bold align-left">Subscribe</a>
         </nav>
         <div class="container-fluid">
             <div
