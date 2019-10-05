@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 <?php 
 session_start();
 if(isset($_SESSION["calcuser"])){
 header("Location: calc.php");
 }
+=======
+<?php
+include("process/connection.php");
+include("process/login_process.php");
+
+include("process/signup_process.php");
+
+include("process/contact_process.php");
+
+
+>>>>>>> 30678b228d39c161153696e67d7a8db14723d0dd
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +31,42 @@ header("Location: calc.php");
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="contact.css" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        
+        
+         <!--Javascript for the cookie modal notification set to remain static onclick outside-->
+        <script>
+            $(document).ready(function(){
+                $("#myModal").modal({
+                backdrop: 'static',
+                keyboard: false });
+                });
+        </script>
+        <!--Styling for the cookie modal-->
+        <style>
+            .cookies-popup{
+                margin: 20px;
+                background: rgb(9, 80, 58); 
+            }
+            .modal-header{
+                background: rgb(137, 247, 212); 
+            }
+            .modal-footer{
+                background: rgb(137, 247, 212); 
+                
+            }
+            .btn-primary{
+                background: #b3196e;
+                display: flex;
+                margin: 0px 180px 0px;
+                
+            }
+        </style>
     </head>
     <body>
         <!-- Sign-in page -->
@@ -34,9 +82,12 @@ header("Location: calc.php");
                     id="logo-img"
                 />
             </span>
-            <a href="faq.html" class="text-light font-weight-bold">FAQ</a>
+            
+            <a href="Faq.html" class="text-light font-weight-bold">FAQ</a>
+            <a href="subscribe.php" class="text-light font-weight-bold align-left">Subscribe</a>
         </nav>
         <div class="container-fluid">
+			<div style="color: green;"><?php echo $messageSent; ?></div>
             <div
                 class="row pt-2 float-sm-left"
                 style="min-height: 100vh;"
@@ -173,7 +224,14 @@ header("Location: calc.php");
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
 
+<<<<<<< HEAD
                                        <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;" required> I read and agree to your terms and conditions</span> 
+=======
+                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span><br>
+                                       <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
+                                       <h6 style="color: white; margin-top: -8px;"> TERMS AND CONDITIONS</h6>
+                                       <p style="color:white; margin-bottom:12px; margin-top:-15px; padding:10px">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
+>>>>>>> 30678b228d39c161153696e67d7a8db14723d0dd
                                         
                                     </div>
                                     <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
@@ -236,9 +294,78 @@ header("Location: calc.php");
                 </div>
             </div>
         </div>
+        
+        
+		<div id="contact-form-frame" class="contact-button hide-button">
+			<div class="container">  
+					<form name="contact-form"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" id="contact-form"  >
+					  <h3>Contact Us.</h3>
+					  <span id="close-btn">&times;</span>
+					  <fieldset>
+						<input type="text" id="name" name="name" required minlength="4" placeholder="Your Name">
+						
+					  </fieldset>
+					  <fieldset>
+						<input type="email" id="email" name="email" required placeholder="Your Email Here...">
+						
+					  </fieldset>
+					  <fieldset>
+						<input type="text" id="title" name="title" required autofocus placeholder="Title">
+						
+					  </fieldset>
+					 
+					  <fieldset>
+						<textarea id="message" minlength="20" name="message" required placeholder="Type your message here..."></textarea>
+					  </fieldset>
+					  <fieldset>
+						<button name="submitted" id="contact-submit">Submit</button>
+					  </fieldset>
+					</form>
+				  </div>
+				</div>
+			<div style="margin: 20px 0 0 100px;" class="contact-modal-open-btn">
+				<h2>Contact Us.</h2>
+			</div>
+      
+      
+      	  <!--Beginning of cookie notification modal-->
+        <div class="cookies-popup">
+            <!-- Modal HTML -->
+            <div id="myModal" class="modal fade" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <img
+                                src="https://res.cloudinary.com/izik4004/image/upload/v1569624977/Group_2_1.png"
+                                alt="logo"
+                                style="width: 110px; height: 40px"
+                                id="logo-img"
+                            />
+                            <h5 class="modal-title">Cookie Notice</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>The Networth calculator webiste employs cookies to improve your user experience. 
+                            For more information please read our <a href="cookies.html" class="cookies">cookie policy</a>. <br>
+                            By clicking the "I ACCEPT" button, you will be providing your consent to our use of cookies.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button  type="button" class="btn btn-primary" data-dismiss="modal">I Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
         <script src="./app.js"></script>
         <script src="./ajax.js"></script>
+=======
+        <script src="js/app.js"></script>
+        <script src="js/contact.js"></script>
+
+
+>>>>>>> 30678b228d39c161153696e67d7a8db14723d0dd
     </body>
 </html>
