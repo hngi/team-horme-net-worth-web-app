@@ -69,14 +69,7 @@ include("process/signup_process.php");
                         You're a step away from knowing how to calculate your
                         Net-Worth
                     </h3>
-                    <a href="#page1">
-                        <h3
-                            class="h3 font-weight-bolder"
-                            style="color:  rgb(38, 155, 120)"
-                        >
-                            Sign up with us for free
-                        </h3></a
-                    >
+                    
                 </div>
                 <div
                     class="row  p-5 align-self-center m-auto bor col-md-5 mb-5"
