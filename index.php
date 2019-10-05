@@ -6,7 +6,7 @@ header("Location: calc.php");
 ?>
 
 <!DOCTYPE html>
-<html >
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +34,7 @@ header("Location: calc.php");
                     id="logo-img"
                 />
             </span>
+            <a href="faq.html" class="text-light font-weight-bold">FAQ</a>
         </nav>
         <div class="container-fluid">
             <div
@@ -72,11 +73,11 @@ header("Location: calc.php");
                     >
                 </div>
                 <div
-                    class="row  p-5 align-self-center m-auto bor col-md-5 mb-5"
+                    class="row  pt-3 pb-1 align-self-center m-auto bor col-md-5 mb-5"
                     style="min-height: 50vh;background-color: rgb(14, 34, 56);box-shadow:  -10px  5px 10px gray;"
                 >
                     <div
-                        class=" align-self-center text-center pb-5 col-md-12"
+                        class=" align-self-center text-center pb- col-md-12"
                         id="page1"
                     >
                         <div class="row">
