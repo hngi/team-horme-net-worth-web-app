@@ -67,7 +67,7 @@ function submitUp(event) {
 
 
     async function fetchData(dataForm) {
-        const response = await fetch('/process/signup_process.php', {
+        const response = await fetch('process/signup_process.php', {
             method: 'POST',
             body: dataForm
         });
@@ -147,7 +147,7 @@ submit[1].addEventListener('click', (event) => {
 
 
     async function fetchData(dataForm) {
-        const response = await fetch('/process/login_process.php', {
+        const response = await fetch('process/login_process.php', {
             method: 'POST',
             body: dataForm
         });

@@ -23,11 +23,10 @@ include("process/contact_process.php");
         />
         <link rel="stylesheet" href="main.css" />
         <link rel="stylesheet" href="contact.css" />
+        <link rel="stylesheet" href="style.css" />
+
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        
         
         
         <!--Styling for the cookie modal-->
@@ -299,14 +298,15 @@ include("process/contact_process.php");
 					</form>
 				  </div>
 				</div>
-			<div style="margin: 20px 0 0 100px;" class="contact-modal-open-btn">
+			<div style="margin: 10px 0 0 80px; height: 60px; padding:3px;" class="contact-modal-open-btn">
 				<h2>Contact Us.</h2>
 			</div>
       
       
       	  <!--Beginning of cookie notification modal-->
+<!--
         <div class="cookies-popup">
-            <!-- Modal HTML -->
+             Modal HTML 
             <div id="myModal" class="modal fade" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -331,6 +331,7 @@ include("process/contact_process.php");
                 </div>
             </div>
         </div>
+-->
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -345,7 +346,10 @@ include("process/contact_process.php");
                 keyboard: false });
                 });
         </script>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
     </body>
 </html>
