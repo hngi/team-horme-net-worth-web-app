@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+    <meta name="keywords" description="Login page Horme Team"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="row d-flex">
+		<div class="container">
+			<img id="logo" src="">
+            <h1>Register Here</h1>
+
+            <form>
+                <label for="firstname">FIRST NAME</label>
+                <i class="fa fa-user"></i>
+                <input id="test" class="form-control" type="text" placeholder="First Name" id="firstname" name="firstname">
+                <label for="lastname">LAST NAME</label>
+                <i class="fa fa-user"></i>
+                <input class="form-control" type="text" placeholder="Last Name" id="lastname" name="lastname">
+                <label for="email">EMAIL</label>
+                <i class="fa fa-envelope"></i>
+                <input class="form-control" type="text" placeholder="Email Address" id="email" name="email">
+                <label for="Phone-number">PHONE NUMBER </label>
+                <i class="fa fa-phone"></i>
+                <input class="form-control" type="text" placeholder="Phone Number" id="Phone-number" name="Phone-number">
+                <label for="password">PASSWORD</label>
+                <i class="fa fa-lock"></i>
+                <input class="form-control" type="password" placeholder="Password" id="password" name="password">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <i class="fa fa-lock"></i>
+                <input class="form-control" type="text" placeholder="Re-enter password" id="confirm-password" name="confirm-password">
+                <div>
+                    <input class="form-control" type="checkbox">
+                    <label>I Agree to the Terms & Condition </label>
+                </div>
+                <div>
+                    <input class="form-control" id="submitBtn" type="submit" value="REGISTER NOW" name="submit">
+                </div>
+            </form>
+		</div>		
+        <aside class="aside-form">
+            <h1>Already Registered?</h1>
+
+            <form>
+                <label for="email">Email</label>
+                <i class="fa fa-user"></i>
+                <input class="form-control" type="text" placeholder="Email address" id="email" name="email">
+                <label for="password">Password</label>
+                <i class="fa fa-lock"></i>
+                <input class="form-control" type="password" placeholder="*******" id="password" name="password">
+                <div class="for-password">
+                <input class="form-control" type="checkbox">
+                <label>Remember Me <a href="">Forgot Password?</a> </label>
+                </div>
+
+                <input class="form-control" id="submitBtn" type="submit" value="Login" name="signup">
+            </form>
+        </aside>
+				
+    </div>
+    
+    
+</body>
+</html>
