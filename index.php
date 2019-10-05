@@ -4,6 +4,7 @@ include("process/login_process.php");
 
 include("process/signup_process.php");
 
+include("process/contact_process.php");
 
 
 ?>
@@ -26,6 +27,7 @@ include("process/signup_process.php");
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="contact.css" />
     </head>
     <body>
         <!-- Sign-in page -->
@@ -44,6 +46,7 @@ include("process/signup_process.php");
             <a href="faq.html" class="text-light font-weight-bold">FAQ</a>
         </nav>
         <div class="container-fluid">
+			<div style="color: green;"><?php echo $messageSent; ?></div>
             <div
                 class="row pt-2 float-sm-left"
                 style="min-height: 100vh;"
@@ -177,10 +180,10 @@ include("process/signup_process.php");
                                             class="p-2 btn text-light font-weight-bold col-12 mb-2"
                                         />
 
-                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span> 
+                                       <input type="checkbox" name="check" /><span id="terms" style="color:green; font-size: : 8px;"> I read and agree to your terms and conditions</span><br>
                                        <span style="color: red; font-size: 12px;"><?php echo $unchecked;?></span>>
-                                       <h6 style="color: white; margin-top: 15px;"> TERMS AND CONDITIONS</h6>
-                                       <p style="color:white; margin:0; padding:0">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
+                                       <h6 style="color: white; margin-top: -8px;"> TERMS AND CONDITIONS</h6>
+                                       <p style="color:white; margin-bottom:12px; margin-top:-15px; padding:10px">By using our net-worth app you automatically give us the permission to make use of the sign up data you inputed for further research.</p>
                                         
                                     </div>
 
@@ -242,8 +245,42 @@ include("process/signup_process.php");
                 </div>
             </div>
         </div>
+        
+        
+		<div id="contact-form-frame" class="contact-button hide-button">
+			<div class="container">  
+					<form name="contact-form"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" id="contact-form"  >
+					  <h3>Contact Us.</h3>
+					  <span id="close-btn">&times;</span>
+					  <fieldset>
+						<input type="text" id="name" name="name" required minlength="4" placeholder="Your Name">
+						
+					  </fieldset>
+					  <fieldset>
+						<input type="email" id="email" name="email" required placeholder="Your Email Here...">
+						
+					  </fieldset>
+					  <fieldset>
+						<input type="text" id="title" name="title" required autofocus placeholder="Title">
+						
+					  </fieldset>
+					 
+					  <fieldset>
+						<textarea id="message" minlength="20" name="message" required placeholder="Type your message here..."></textarea>
+					  </fieldset>
+					  <fieldset>
+						<button name="submitted" id="contact-submit">Submit</button>
+					  </fieldset>
+					</form>
+				  </div>
+				</div>
+			<div style="margin: 20px 0 0 100px;" class="contact-modal-open-btn">
+				<h2>Contact Us.</h2>
+			</div>
+       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="./app.js"></script>
+        <script src="contact.js"></script>
     </body>
 </html>
