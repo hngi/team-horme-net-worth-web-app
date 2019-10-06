@@ -66,6 +66,7 @@ include("process/contact_process.php");
             </span>
             
             <a href="Faq.html" class="text-light font-weight-bold">FAQ</a>
+            <a href="Help.html" class="text-light font-weight-bold">Help</a>
             <a href="subscribe.php" class="text-light font-weight-bold align-left">Subscribe</a>
         </nav>
         <div class="container-fluid">
