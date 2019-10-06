@@ -15,8 +15,10 @@ body {
 }
 
 .nav {
-    background-color: #2FC199 !important;
+
+    /* background-color: #2FC199 !important; */
 }
+    
 
 .nav-link {
     margin-left: -5% !important;

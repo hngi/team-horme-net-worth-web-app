@@ -23,18 +23,22 @@
             <!-- Footer -->
             <footer class="page-footer font-small blue pt-4">
                 <!-- Footer Links -->
-                <div class="container-fluid text-center text-md-left clearfix">
+
+                <div class="container-fluid text-center text-md-left">
+
                     <!-- Grid row -->
                     <div class="row">
                         <!-- Grid column -->
                         <div class="col-md-3 mt-md-0 mt-3">
 
                             <!-- Content -->
-                            <ul class="list-unstyled text-cap ">
+
+                            <!-- <ul class="list-unstyled text-cap ">
                                 <li class="my-list">
                                     <a href="#!" class="title-color">About Us</a>
                                 </li>
-                            </ul>
+                            </ul> -->
+
                         </div>
                         <!-- Grid column -->
                         <div class="col-md-3 mt-md-0 mt-3">
@@ -43,7 +47,11 @@
                             <ul class="list-unstyled text-cap ">
                                 
                                 <li class="my-list">
-                                    <a href="#!" class="title-color">Contact Us</a>
+
+                                    <a href="help.php" class="title-color">Help</a>
+
+                                    
+
                                 </li>
                             </ul>
                         </div>
@@ -53,7 +61,10 @@
                             <ul class="list-unstyled text-cap ">
                                 
                                 <li class="my-list">
-                                    <a href="#!" class="title-color">Faq</a>
+
+                                    <a href="faq.html" class="title-color">Faq</a>
+
+                                    
                                 </li>
                             </ul>
                     </div>
@@ -65,7 +76,9 @@
                         <ul class="list-unstyled text-cap ">
                                 
                             <li class="my-list">
-                                <a href="#!" class="title-color">Subscribe</a>
+
+                                <a href="subscribe.php" class="title-color">Subscribe</a>
+
                             </li>
                         </ul>
                     </div>
