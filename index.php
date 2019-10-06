@@ -270,7 +270,7 @@ include("process/contact_process.php");
                 </div>
             </div>
         </div>
-        
+        <?php //include("footer.php"); ?>
         
 		<div id="contact-form-frame" class="contact-button hide-button">
 			<div class="container">  
