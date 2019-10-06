@@ -1,66 +1,90 @@
-.cont{
-    background-color: black;
-    height: 100vh;
-}
-#reg{
-    color: rgb(255, 187, 0);
-}
-#btn2{
-    border-radius:25px;
-    background-color: rgb(255, 187, 0) !important;
-    border: none !important;
-    width: 30% !important;
-}
-#type{
-    border: none !important;
-    border-bottom: solid 0.5px !important;
-    border-bottom-left-radius: 0% !important;
-    border-bottom-right-radius: 0% !important;
-}
-#login{
-    background-color: black;
-    border:none;
-    margin-left: 50%;
-    border-bottom: 1px solid rgb(255, 187, 0);
-    color:rgb(255, 187, 0);
+body {
+    background-color: #E5E5E5 !important;
 }
 
-#h12{
-    color: white !important;
-    text-align: center !important;
+.body {
+    background-color: white !important;
 }
-#forget{
-    color: rgb(255, 187, 0);
-}
-#rem{
-    margin-left: 20% !important;
+
+#collapsibleNavId {
     color: white !important;
 }
-#remt{
-    margin-left: 1%;
-    color: white !important;
+
+.welcome {
+    background-color: #E5E5E5 !important;
 }
-.btn1{
-    background-color: rgb(255, 187, 0) !important;
-    border: none !important;
-    width: 52% !important;
-    margin-left: 25%;
+
+.nav {
+    /* background-color: #2FC199 !important; */
 }
-#btn{
-    border-radius:25px;
+
+.nav-link {
+    margin-left: -5% !important;
 }
-#or{
-    color: white !important;
-    margin-left: 33% !important;
+
+.alert-msg {
+    display: none;
 }
-.img{
-    width: 10%;
-    height: 10%;
-   
+
+.name {
+    color: rgb(255, 255, 255) !important;
 }
-.logo{
-    margin-left: 30%;
+
+.user {
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 0px 4px 4px #2FC199 !important;
 }
-#agree{
-    margin-top: 1%;
+
+.id {
+    border-right: solid 1px white;
+}
+
+#signout {
+    border-left: solid 1px white;
+}
+
+#user {
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 0px 4px 4px #2FC199 !important;
+    font-size: 2.5em !important;
+}
+
+p {
+    margin-bottom: 8% !important;
+    /* margin-left: 38% !important; */
+}
+
+.black-bg {
+    background-color: black !important;
+    padding: 3px;
+}
+
+.cont {
+    color: #2FC199 !important;
+}
+
+#btn {
+    background-color: #1AB188 !important;
+    box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+#net {
+    color: #000000 !important;
+    font-size: 2em;
+    /* margin-left: 36% !important; */
+}
+
+#display {
+    width: 30% !important;
+    margin-left: 35% !important;
+    background: #1AB188;
+    box-shadow: 0px 4px 3px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    color: #000000 !important;
+}
+
+.copyright {
+    padding: 10px;
+    background-color: black !important;
+    color: white;
 }

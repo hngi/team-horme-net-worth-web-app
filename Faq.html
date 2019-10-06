@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Net-Worth Calculator</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+            
+        />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+           </head>
+    <body>
+
+    <style>
+    
+    @import url(https://fonts.googleapis.com/css?family=Roboto);
+body {
+  font-family: 'Roboto', sans-serif;
+} 
+h3 {
+  text-align:center; 
+  font-size: 2em; 
+  color: #9E9E9E;
+  margin-top:0;
+}
+h3::after {
+    content: "";
+    height: 2px;
+    display:block;
+    background-color: #9E9E9E;
+    width: 50px;
+    margin: 10px auto 15px;
+    text-align: center;
+}
+
+#section1 {
+  background-color: #FFF; 
+  padding: 15px 20px;
+}
+#section2 {
+  background-color: #212121; 
+  padding: 15px 20px;
+}
+@media (min-width: 600px) {
+  #section1, #section2 {
+    padding: 15px 100px;
+  }
+}
+@media (min-width: 1030px) {
+  #section1, #section2 {
+    padding: 15px 450px;
+  }
+}
+/********************/
+/* Panel dark color */
+/********************/
+/* .panel-dark {
+    background: #424242;
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: 0px 0px 0px transparent;
+    color: #FFF;
+    margin-top:0;
+}
+.panel-dark .panel-heading {
+    padding: 0;
+}
+
+.panel-dark .panel-dark {
+    background: #616161;
+}
+
+.panel-dark .panel-body {
+    border-color: rgba(255, 255, 255, 0.10) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
+    box-shadow: 0px -1px 0px #212121;
+}
+
+.panel-dark .panel-title > a {
+    color: #FFF;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none !important;
+}
+
+.panel-dark .panel-title > a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.panel-dark .panel-title > a:focus {
+    outline: none;
+} */
+
+/********************/
+/* Panel light color */
+/********************/
+.panel-light {
+/*     background: #E0E0E0; */
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: 0px 0px 0px transparent;
+    color: #000;
+    margin-top:0;
+}
+.panel-light .panel-heading {
+    padding: 0;
+}
+
+.panel-light .panel-light {
+    background: #E0E0E0;
+}
+
+.panel-light .panel-body {
+    border-color: rgba(255, 255, 255, 0.10) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
+    box-shadow: 0px -1px 0px #BDBDBD;
+}
+
+.panel-light .panel-title > a {
+    color: #000;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none !important;
+}
+
+.panel-light .panel-title > a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.panel-light .panel-title > a:focus {
+    outline: none;
+}
+
+footer {
+  text-align: center;
+  margin: 15px;
+}
+footer h4{
+  font-size: 2.92rem;
+  font-weight:100;
+    margin: 1.46rem 0 1.168rem; 
+}
+    
+    </style>    
+        <!-- FAQ page -->
+        <nav
+            class="navbar navbar-light"
+            style="background-color: rgb(38, 155, 120)"
+        >
+            <span>
+               <a href="index.php"> <img
+                    src="https://res.cloudinary.com/izik4004/image/upload/v1569624977/Group_2_1.png"
+                    alt="logo"
+                    style="width: 110px; height: 40px"
+                    id="logo-img"
+                /></a>
+            </span>
+        </nav>
+        
+           
+   <div class="">
+        <h3 class="h1 font-weight-bolder mt-5" style="color: rgb(38, 155, 120); text-shadow: -1px 1px 2px black; text-align: center;">
+        FREQUENTLY ASKED QUESTIONS
+        </h3>
+       
+        <div class="faq ml-5 mt-5">
+         <h5 style="color:  rgb(38, 155, 120); padding-left: 50px; ">What is Net-Worth?</h5>
+         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-light">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="indicator fa fa-caret-right">
+                            </i>
+                            How do I figure my networth?
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                            Net worth is the value of all assets, minus the total of all liabilities. Put another way, net worth is what is owned minus what is owed. This net worth calculator helps determine your net worth.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-light">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="indicator fa fa-caret-right">
+                            </i>
+                            Is net worth important?
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                            When you see financial trends in black and white on your net worth statements, you are forced to confront the realities of where you stand financially
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-light">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="indicator fa fa-caret-right">
+                            </i>
+                            What increases net worth?
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        The first step to increasing your net worth is by wiping away debt. Net worth is equity minus debt, so lowering that debt increases net worth considerably. Making smart investments, not just in stocks, is a surefire way to increase net worth
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-light">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="indicator fa fa-caret-right">
+                                </i>
+                                Does net worth include home?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                                Your net worth is really everything you own of significance (your assets) minus what you owe in debts (your liabilities). Assets include cash and investments, your home and other real estate, cars or anything else of value you
+                        </div>
+                    </div>
+                </div>
+                <h5 style="color:  rgb(38, 155, 120); padding-left: 50px; ">Assets/Liabilities</h5>
+                <div class="panel panel-light">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <i class="indicator fa fa-caret-right">
+                                    </i>
+                                    What are assets and liabilities?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                             In its simplest form, your balance sheet can be divided into two categories: assets and liabilities. Assets are the items your company owns that can provide future economic benefit. Liabilities are what you owe other parties. In short, assets put money in your pocket, and liabilities take money out!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-light">
+                            
+                            <div class="panel-heading" role="tab" id="headingSix">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <i class="indicator fa fa-caret-right">
+                                        </i>
+                                        Why do assets and liabilities have to balance?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                <div class="panel-body">
+                                        The assets on the balance sheet consist of what a company owns or will receive in the future and which are measurable. Liabilities are what a company owes, such as taxes, payables, salaries, and debt. ... For the balance sheet to balance, total assets should equal the total of liabilities and shareholders' equity
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-light">
+                                <div class="panel-heading" role="tab" id="headingSeven">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseTwo">
+                                            <i class="indicator fa fa-caret-right">
+                                            </i>
+                                            Can liabilities be greater than assets?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                                    <div class="panel-body">
+                                            If the business has more assets than liabilities – also a good sign. However, if liabilities are more than assets, you need to look more closely at the company's ability to pay its debt obligations. ... On the balance sheet, Equity = Total Assets - Total Liabilities
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+        </div>
+
+
+
+
+
+
+        </div>
+                    
+    </div>
+</div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
+<script>
+
+function toggleChevron(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find("i.indicator")
+        .toggleClass('fa-caret-right fa-caret-down');
+}
+  $('#accordion').on('hidden.bs.collapse', toggleChevron);
+  $('#accordion').on('shown.bs.collapse', toggleChevron);
+  $('#accordion2').on('hidden.bs.collapse', toggleChevron);
+  $('#accordion2').on('shown.bs.collapse', toggleChevron);
+  $('#accordion2').on('hidden.bs.collapse', toggleChevron);
+  $('#accordion2').on('shown.bs.collapse', toggleChevron);
+  $('#accordion2').on('hidden.bs.collapse', toggleChevron);
+  $('#accordion2').on('shown.bs.collapse', toggleChevron);
+  $('#accordion2').on('hidden.bs.collapse', toggleChevron);
+  $('#accordion2').on('shown.bs.collapse', toggleChevron);
+
+</script>

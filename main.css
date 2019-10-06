@@ -35,31 +35,59 @@ img {
     padding: 5px;
 }
 
-#name {
-    background: url(./icons/user.svg) no-repeat scroll 7px 7px;
+/* #firstName {
+    background: url(./icons/user.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
 }
 #secondName {
-    background: url(./icons/user.svg) no-repeat scroll 7px 7px;
+    background: url(./icons/user.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
 }
 #email {
-    background: url(./icons/envelope.svg) no-repeat scroll 7px 7px;
+    background: url(./icons/envelope.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
 }
 #password {
-    background: url(./icons/lock.svg) no-repeat scroll 7px 7px;
+    background: url(./icons/lock.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
 }
 #phone {
-    background: url(./icons/phone-alt.svg) no-repeat scroll 7px 7px;
+    background: url(./icons/phone-alt.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
-}
+} */
 
-.form-control:focus {
+/* .form-control:focus {
     box-shadow: none;
     border-bottom: 2px solid rgb(224, 191, 3) !important;
+} */
+/* #username::placeholder {
+    color: orange;
 }
-.form-control input{
-    
+#password1::placeholder {
+    color: orange;
+} */
+@media (min-width: 576px) {
+    .bor {
+        border-radius: 0;
+    }
 }
+@media (min-width: 768px) {
+    .bor {
+        border-radius: 10px;
+    }
+    .html {
+        overflow: hidden;
+    }
+}
+.bg {
+    background-color: rgb(38, 155, 120);
+}
+.dropdown-menu {
+    min-width: 2rem !important;
+}
+.delete {
+    height: 30px;
+    width: 30px;
+}
+
+.alert-msg{ display: none;}
