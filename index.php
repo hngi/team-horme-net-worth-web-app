@@ -108,7 +108,7 @@ include("process/contact_process.php");
                 </div>
                 <div
                     class="row  pt-3 pb-1 align-self-center m-auto bor col-md-5 mb-5"
-                    style="min-height: 50vh;background-color: rgb(14, 34, 56);box-shadow:  -10px  5px 10px gray;"
+                    style="min-height: 40vh; max-height: 40vh; max-width:30vh; background-color: rgb(14, 34, 56);box-shadow:  -10px  5px 10px gray;"
                 >
                     <div
                         class=" align-self-center text-center pb- col-md-12"
