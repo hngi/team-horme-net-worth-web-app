@@ -4,6 +4,7 @@ body {
 
 .body {
     background-color: white !important;
+    Overflow: hidden;
 }
 
 #collapsibleNavId {
