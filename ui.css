@@ -1,0 +1,111 @@
+*{
+    box-sizing:border-box;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family:Montserrat;
+}
+.image{
+    text-align: center;
+}
+.nav-link{
+    color: black;
+    font-weight: 300;
+}
+.nav-link:hover{
+    color:#8DD070;
+}
+.caps{
+    padding-top: 10rem;
+    color: white;
+    widows: 100%;
+
+}
+
+.message{
+    float: left;
+    margin-left: 3rem;
+}
+.image{
+    height: 5vh;
+    width: 100%;
+}
+@media(max-width: 960px){
+    .welcome{
+        margin-left: 2em;
+    }
+}
+@media(max-width: 955px){
+    .vector{
+        display: none;
+    }
+    .welcome{
+        text-align:center;
+    }
+    .container-fluid{
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .under-caps{
+        text-align: center;
+    }
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+footer{
+    background-color:#555466;
+    width: 100%;
+    height: 10vh;
+}
+.icon{
+    color: #8DD070 !important;
+    float: right;
+    margin: 1%;
+}
+.icon:hover{
+    text-decoration: none;
+}
+.under-caps{
+    color:#8DD070;
+    font-weight:lighter;
+    width: 100%;
+    margin-bottom: 2rem;
+    
+}
+h2{
+    color:white;
+}
+.vector{
+    width: 35%;
+    float: right;
+    height: 80%;
+    margin: 3rem 3rem;
+}
+
+#img{
+    width: 100%;
+    height: auto;
+    padding-top:3rem;
+    
+}
+#getStartedBtn{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    background-color: #8DD070;
+    padding: 1rem 2rem;
+}
+h5{
+    color:#555466;
+    text-align:left;
+}
+.container-fluid{
+    width: 100%;
+    height: 80vh;
+    background-color: #555466;
+}
