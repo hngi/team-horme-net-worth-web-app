@@ -35,6 +35,36 @@ img {
     padding: 5px;
 }
 
+/* dashboard style */
+[container] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
+
+[container2] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
+
+.money-box {
+    text-align: center;
+}
+
+.asset-box h4 {
+    margin-top: 1em;
+}
+
+.asset-box p {
+    font-size: 1.5em;
+}
+
+.link {
+    padding: 0.5em;
+}
+
+
 /* #firstName {
     background: url(./icons/user.svg) no-repeat scroll 7px 20px;
     background-size: 15px;
@@ -85,9 +115,20 @@ img {
 .dropdown-menu {
     min-width: 2rem !important;
 }
+
+
+@media only screen and (max-width: 720px) {
+    [container] {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
 .delete {
     height: 30px;
     width: 30px;
 }
 
 .alert-msg{ display: none;}
+
