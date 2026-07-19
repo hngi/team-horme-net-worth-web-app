@@ -22,6 +22,8 @@ include("process/contact_process.php");
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="main.css" />
+
+        <link rel="shortcut icon" href="./images/netbar.jpg" type="image/x-icon">
         <link rel="stylesheet" href="contact.css" />
         <link rel="stylesheet" href="style.css" />
 
@@ -49,6 +51,7 @@ include("process/contact_process.php");
                 
             }
         </style>
+
     </head>
     <body>
         <!-- Sign-in page -->
