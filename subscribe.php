@@ -121,7 +121,7 @@
     }
 
     /* Responsiveness */
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
         .wrapper{
             margin-top: 12rem;
             height:100vh;
@@ -129,14 +129,19 @@
 
         .wrapper h1{
             margin-bottom: 20px;
-            font-size: 32px;
+            font-size: 24px;
         }
 
         .newsletter{
-            max-width: 400px;
+            max-width: 350px;
+        }
+        .newsletter .btn{
+            padding: 15px 15px;
+            letter-spacing: 3px;
+            right: 20px;
+
         }    
     }
-    
 
 </style>
 
